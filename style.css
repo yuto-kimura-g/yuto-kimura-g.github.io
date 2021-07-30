@@ -1,0 +1,22 @@
+/*
+ * this is comment text.
+ * write by Yuto02D2-E2 on 2021/07/30
+ */
+
+html {
+    font-family: cursive;
+}
+
+.header- {
+    background-color: aqua;
+    /* float: left; */
+}
+
+.footer- {
+    background-color: aqua;
+    /* float: right; */
+}
+
+h2 {
+    border-bottom: 5px solid #c0c0c0;
+}
