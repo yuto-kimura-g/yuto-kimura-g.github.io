@@ -1,66 +1,402 @@
-<!-- this is comment text. -->
-<!-- write by Yuto02D2-E2 on 2021/07/30 -->
+<!--
+    this is comment text.
+    write by Yuto02D2-E2 since 2021/07/30
+-->
+
 
 <!DOCTYPE html>
 <html lang="ja">
 
+
     <head>
+        <!-- 表示されない情報の設定，ライブラリ？ / CSS読み込みなど -->
+        <title>ぎっとはぶあいおーのテスト</title>
+
+        <!-- 以下bootstrapのテンプレート -->
+        <!-- Required meta tags -->
         <meta charset="UTF-8">
-        <title>github io test</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+        <!-- ユーザー定義のCSS(フォント，画像の微調整など)．bootstrapの下に書かないといけない -->
+        <!-- bootstrapは無事に反映されたけど，何故かユーザー定義のstyle.cssが反映されなくなった．フォントとかは絶対変えたいからこれは困る -->
+        <!-- → cssでhtml {}をbody {} に変えたらいけた．何故なのかは知らない -->
         <link rel="stylesheet" href="style.css">
     </head>
 
+
+
     <body>
-        <div class="header-">
-            <p>
-                this is header
-            </p>
-        </div>
+        <!-- ####################################### ここからヘッダー ############################################### -->
+        <header>
+            <!-- 以下bootstrapのnavbar -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a href="https://yuto02d2-e2.github.io/" class="navbar-brand">
+                        <img src="./image/logo-ver0001.png" alt="logo" width="80" height="80">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a href="http://www.google.com/" class="nav-link">
+                                    <img src="./image/search.svg" alt="ggrks"> (◍＞◡＜◍)。ggrks ✧♡
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    ??? (ﾟ∀ﾟ) ???
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li class="nav-item">
+                                        <a href="http://www.google.com/search?q=現在の時刻" class="dropdown-item">
+                                            <img src="./image/clock.svg" alt="clock">
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://www.google.com/search?q=今日の天気" class="dropdown-item">
+                                            <img src="./image/thermometer-sun.svg" alt="sun">
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://www.google.com/search?q=パックマン" class="dropdown-item">
+                                            <img src="./image/controller.svg" alt="game">
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <!-- EasterEgg -->
+                                        <a href="#EasterEgg" data-bs-toggle="modal" class="dropdown-item">
+                                            <img src="./image/bug.svg" alt="bug">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- navbarここまで -->
+
+            <!-- Modalの定義，設定など -->
+            <div class="modal fade" id="EasterEgg" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                <div class="spinner-grow text-danger" role="status" style="width: 2rem; height: 2rem;">
+                                    <span class="visually-hidden"></span>
+                                </div>
+                                イースターエッグだよ
+                                <div class="spinner-grow text-danger" role="status" style="width: 2rem; height: 2rem;">
+                                    <span class="visually-hidden"></span>
+                                </div>
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>
+                                これはbootstrapのmodal(赤のやつはspinner)という機能です <br>
+                                多分内部的にはJavaScriptで実装されているはず<br>
+                                参考：<a href="https://e-words.jp/w/イースターエッグ.html">イースターエッグとは</a> <br>
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                Close Modal
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal ここまで -->
+
+            <!-- 真ん中に表示されるロゴ -->
+            <!-- サイズ調節(レスポンシブ対応)後でやる -->
+            <a href="#">
+                <img src="./image/logo-ver0001.png" alt="logo1" width="400" height="400">
+            </a>
+
+            <!-- コンテンツ一覧．ページ内へのリンク -->
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link" id="page-link" href="#profile">
+                        <img src="./image/person-circle.svg" alt="person"> Profile
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="page-link" href="#products">
+                        <img src="./image/grid.svg" alt="grid"> Products
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="page-link" href="#programming-languages">
+                        <img src="./image/terminal.svg" alt="terminal"> Programming Languages
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="page-link" href="#other">
+                        <img src="./image/info-circle.svg" alt="info"> Other
+                    </a>
+                </li>
+            </ul>
+        </header>
+        <!-- ###################################### ヘッダー ここまで ################################################# -->
 
 
+
+        <!-- ######################################## 本体ここから ##################################################### -->
         <div class="main">
-            <h1>Contents</h1>
+            <br><br><br>
             <p>
-                this is my first site.<br>
+                github io test. this is my first site.<br>
                 in the future, I might use this site as a portfolio.
             </p>
+            <br><br><br>
 
-            <h2>Products</h2>
-            <li>LINE-Bot (reminder app) : not yet created</li>
 
-            <h2>Programming Languages</h2>
-            <ul>
-                <li>Python : most used and love</li>
-                <li>C : at univ</li>
-                <li>C++ : competitive programming</li>
-                <li>Rust : now studying</li>
-                <li>Go : now studying</li>
-                <li>Processing : at univ</li>
-                <li>Java : future(at univ)</li>
-                <li>Assembly : now studying</li>
-            </ul>
+            <!-- プロフィール -->
+            <div class="profile">
+                <div class="shadow-lg p-3 mb-5 bg-white rounded">
+                    <h2 id="profile" class="under-line"><img src="./image/person-circle.svg" alt="person"> Profile</h2>
+                    <br><br>
+                    <p>
+                        Faculty of Intelligence and Informatics, B2<br>
+                        GitHub : <a href="https://github.com/Yuto02D2-E2">
+                            <img src="./image/GitHub_cat.png" alt="GitHub" width="100" height="80">
+                        </a>
+                    </p>
+                </div>
+                <br>
+            </div>
 
-            <h2>Profile</h2>
-            <ul>
-                <li><a href="https://github.com/Yuto02D2-E2">GitHub</a></li>
-            </ul>
+
+            <!-- プロダクト紹介(プロダクト無いけど) -->
+            <div class="products">
+                <div class="shadow-lg p-3 mb-5 bg-white rounded">
+                    <h2 id="products" class="under-line"><img src="./image/grid.svg" alt="grid"> Products</h2>
+                    <br><br>
+                    <h3>Private Project</h3>
+                    <h4>・Reminder (LINE Bot)</h4>
+                    <p>
+                        この夏休みに作る予定．<br>
+                        AtCoderの定期通知と，ユーザーが追加した任意の予定を毎朝LINEで教えてくれるものを想定している．<br>
+                        言語：PythonかGo <br>
+                        技術：スクレイピング，LINEデベロッパー関連(Messaging API)，(デプロイするなら)サーバー <br>
+                    </p>
+                    <h4>・Task-List (WebApp)</h4>
+                    <p>
+                        課題と期限をリスト表示する．<br>
+                        大学のスーパーIT人材育成プロジェクトという活動を通して，人生で初めて作ったWebアプリ．<br>
+                        言語：Python(Flask FrameWork), SQLite(DataBase), HTML / CSS <br>
+                        技術：スクレイピング，暗号化，Git(バージョン管理) <br>
+                    </p>
+                    <h4>・モグラたたき</h4>
+                    <p>
+                        大学1年の前期に，授業の最終課題で作った作品．くそげー <br>
+                        人生で初めてのプログラミングだったから，思い入れはある <br>
+                        言語：Processing <br>
+                        技術：無し <br>
+                    </p>
+                    <br>
+
+                    <h3>Collaboration Development</h3>
+                    <h4>・TripNavi (WebApp)</h4>
+                    大学の友達
+                    <a href="https://github.com/konnyakuken">Konken</a>,
+                    <a href="https://github.com/Haru39M">Haru39M</a>,
+                    <a href="https://github.com/mittan1330">mit1330</a>
+                    との共同開発．<br>
+                    主催者はKonken．私は主にバックエンドを担当する予定．
+                    <br><br>
+                </div>
+                <br>
+            </div>
+
+
+            <!-- 使ってきたプログラミング言語の紹介 -->
+            <div class="programming-languages">
+                <div class="shadow-lg p-3 mb-5 bg-white rounded">
+                    <h2 id="programming-languages" class="under-line">
+                        <img src="./image/terminal.svg" alt="terminal"> Programming Languages (I have ever used)
+                    </h2>
+                    <br><br>
+
+                    <!-- 以下bootstrapのcardコンポーネント使用 -->
+                    <!-- サイズ調節後でやる -->
+                    <div class="row row-cols-2 row-cols-md-4 g-4">
+                        <div class="col">
+                            <div class="card border-primary">
+                                <img src="./image/python-official.png" alt="Python" class="card-img-top">
+                                <div class="card-body text-primary">
+                                    <h5 class="card-title"><a href="https://www.python.org/">Python</a></h5>
+                                    <p class="card-text">
+                                        <span class="badge rounded-pill bg-light text-dark">love</span>
+                                        <span class="badge rounded-pill bg-light text-dark">useful</span>
+                                        <span class="badge rounded-pill bg-light text-dark">WebApp</span>
+                                        <span class="badge rounded-pill bg-light text-dark">AtCoder / ICPC</span>
+                                        <span class="badge rounded-pill bg-light text-dark">DeepLearning</span>
+                                        <span class="badge rounded-pill bg-light text-dark">slowly</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border-primary">
+                                <img src="./image/C-Lang.jpg" alt="C" class="card-img-top">
+                                <div class="card-body text-primary">
+                                    <h5 class="card-title">C Language</h5>
+                                    <p class="card-text">
+                                        <span class="badge rounded-pill bg-light text-dark">like</span>
+                                        <span class="badge rounded-pill bg-light text-dark">low-level</span>
+                                        <span class="badge rounded-pill bg-light text-dark">Algorithm</span>
+                                        <span class="badge rounded-pill bg-light text-dark">DataStructure</span>
+                                        <span class="badge rounded-pill bg-light text-dark">fast</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border-primary">
+                                <img src="./image/Cpp-Lang.jpg" alt="C++" class="card-img-top">
+                                <div class="card-body text-primary">
+                                    <h5 class="card-title">C++ Language</h5>
+                                    <p class="card-text">
+                                        <span class="badge rounded-pill bg-light text-dark">AtCoder / ICPC</span>
+                                        <span class="badge rounded-pill bg-light text-dark">AI</span>
+                                        <span class="badge rounded-pill bg-light text-dark">fast</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border-primary">
+                                <img src="./image/Rust.png" alt="Rust" class="card-img-top">
+                                <div class="card-body text-primary">
+                                    <h5 class="card-title"><a href="https://www.rust-lang.org/ja/">Rust</a></h5>
+                                    <p class="card-text">
+                                        <span class="badge rounded-pill bg-light text-dark">now studying</span>
+                                        <span class="badge rounded-pill bg-light text-dark">difficult</span>
+                                        <span class="badge rounded-pill bg-light text-dark">low-level</span>
+                                        <span class="badge rounded-pill bg-light text-dark">fast</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border-primary">
+                                <img src="./image/Go.png" alt="Go" class="card-img-top">
+                                <div class="card-body text-primary">
+                                    <h5 class="card-title"><a href="https://golang.org/">Go Lang</a></h5>
+                                    <p class="card-text">
+                                        <span class="badge rounded-pill bg-light text-dark">now studying</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border-primary">
+                                <img src="./image/" alt="No Image" class="card-img-top">
+                                <div class="card-body text-primary">
+                                    <h5 class="card-title">Assembly</h5>
+                                    <p class="card-text">
+                                        <span class="badge rounded-pill bg-light text-dark">like</span>
+                                        <span class="badge rounded-pill bg-light text-dark">low-level</span>
+                                        <span class="badge rounded-pill bg-light text-dark">now studying</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border-primary">
+                                <img src="./image/Processing.png" alt="Processing" class="card-img-top">
+                                <div class="card-body text-primary">
+                                    <h5 class="card-title"><a href="https://processing.org/">Processing</a></h5>
+                                    <p class="card-text">
+                                        <span class="badge rounded-pill bg-light text-dark">useless</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border-primary">
+                                <img src="./image/Java.jpg" alt="Java" class="card-img-top">
+                                <div class="card-body text-primary">
+                                    <h5 class="card-title"><a href="https://www.java.com/ja/">Java</a></h5>
+                                    <p class="card-text">
+                                        <span class="badge rounded-pill bg-light text-dark">future</span>
+                                        <span class="badge rounded-pill bg-light text-dark">object-oriented</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+
+
+            <!-- その他(主にこのサイトについての説明) ここから -->
+            <div class="other">
+                <div class="shadow-lg p-3 mb-5 bg-white rounded">
+                    <h2 id="other" class="under-line"><img src="./image/info-circle.svg" alt="info"> other</h2>
+                    <br><br>
+                    <h3> about this site</h3>
+                    <p>
+                        This site is hosted by github pages. <br>
+                        The language used is html and css. Also, using a css library called Bootstrap. <br>
+                    </p>
+                    <br>
+                    ここまで見た人お疲れさまでした．
+                    <a href="https://yuto02d2-e2.github.io/raw.html">
+                        気分転換にどうぞ
+                    </a>
+                    <br>
+                    <!-- EasterEggその2 何もない所をクリックでモーダルが出現 -->
+                    <button type="button" class="btn btn-lg" data-bs-toggle="modal" data-bs-target="#EasterEgg">
+                        <pre>
+                        </pre>
+                    </button>
+                    <br>
+                </div>
+                <img src="https://4.bp.blogspot.com/-aJjlevJyK9U/XGjx40QThrI/AAAAAAABRco/j9aRPnYHpX4PU6RZjhTWRh6_8xnPfbNEQCLcBGAs/s800/animal_chara_computer_azarashi.png"
+                    alt="いらすとや" class="img-fluid">
+                <br><a href="#">page top</a><br><br>
+            </div>
         </div>
-
-        <h2>other</h2>
-        <form>
-            <textarea name="everything" id="0000" cols="80"
-                rows="10">this is text area. write every thing here</textarea>
-            <input type="submit" value="button">
-        </form>
-
-        <img src="https://4.bp.blogspot.com/-aJjlevJyK9U/XGjx40QThrI/AAAAAAABRco/j9aRPnYHpX4PU6RZjhTWRh6_8xnPfbNEQCLcBGAs/s800/animal_chara_computer_azarashi.png"
-            alt="いらすとや">
+        <!-- ###################################### 本体(div class = main)ここまで ##################################### -->
 
 
-        <div class="footer-">
-            this is footer
-        </div>
 
+        <!-- ######################################## フッターここから ############################################# -->
+        <footer>
+            <br>
+            <!-- copyrightよく分かってないけど，一応記載しとく -->
+            <p class="copyright">Yuto02D2 &copy; 2021 All rights reserved.</p>
+            <br>
+        </footer>
+        <!-- ###################################### フッター終わり #################################### -->
+
+
+
+        <!-- 以下bootstrapのテンプレート．/bodyの直前に置く -->
+        <!-- Optional JavaScript; choose one of the two! -->
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+            crossorigin="anonymous"></script> -->
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+            integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+            integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+            crossorigin="anonymous"></script>
     </body>
 
 </html>

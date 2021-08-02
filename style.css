@@ -1,22 +1,38 @@
 /*
  * this is comment text.
- * write by Yuto02D2-E2 on 2021/07/30
+ * write by Yuto02D2-E2 since 2021/07/30
  */
 
-html {
-    font-family: cursive;
+
+body {
+    font-family: cursive, Verdana, Osaka, Arial, メイリオ;
+    font-size: large;
+    text-align: center;
 }
 
-.header- {
-    background-color: aqua;
-    /* float: left; */
+header {
+    background-image: url(./image/background-water.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 700px;
 }
 
-.footer- {
-    background-color: aqua;
-    /* float: right; */
+a#page-link {
+    color: white;
+    font-size: larger;
 }
 
-h2 {
+.nav-item {
+    text-align: center;
+}
+
+h2.under-line {
+    display: inline-block;
     border-bottom: 5px solid #c0c0c0;
+}
+
+footer {
+    background-color: rgba(176, 196, 222, 0.5);
 }
