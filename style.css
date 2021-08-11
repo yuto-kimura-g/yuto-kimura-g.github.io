@@ -32,7 +32,30 @@ h2.under-line {
     display: inline-block;
     border-bottom: 5px solid #c0c0c0;
 }
+h3.highlight {
+    display: inline-block;
+    background: linear-gradient(transparent 50%, #a8eaff 50%);
+}
 
 footer {
     background-color: rgba(176, 196, 222, 0.5);
+}
+
+
+/* リスト全体を画面の中央に配置，各リストの要素は左揃えにするためのセット */
+ul {
+    display: inline-block;
+    text-align: left;
+    list-style-position: inside;
+}
+/* divのクラス*/
+div.ul-align-center {
+    text-align: center;
+}
+/* ulのクラス */
+ul.ul-no-dot {
+    list-style-type: none;
+}
+ul.poa {
+    list-style-type: decimal;
 }

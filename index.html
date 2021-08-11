@@ -12,6 +12,8 @@
         <!-- 表示されない情報の設定，ライブラリ？ / CSS読み込みなど -->
         <title>ぎっとはぶあいおーのテスト</title>
 
+        <!-- TODO: meta?タグで検索エンジンが見つけられるように設定 -->
+
         <!-- 以下bootstrapのテンプレート -->
         <!-- Required meta tags -->
         <meta charset="UTF-8">
@@ -31,7 +33,7 @@
         <!-- ####################################### ここからヘッダー ############################################### -->
         <header>
             <!-- 以下bootstrapのnavbar -->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-light bg-light">
                 <div class="container-fluid">
                     <a href="https://yuto02d2-e2.github.io/" class="navbar-brand">
                         <img src="./image/logo-ver0001.png" alt="logo" width="80" height="80">
@@ -55,7 +57,7 @@
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <li class="nav-item">
-                                        <a href="http://www.google.com/search?q=現在の時刻" class="dropdown-item">
+                                        <a href="http://www.google.com/search?q=今何時" class="dropdown-item">
                                             <img src="./image/clock.svg" alt="clock">
                                         </a>
                                     </li>
@@ -92,8 +94,16 @@
                                 <div class="spinner-grow text-danger" role="status" style="width: 2rem; height: 2rem;">
                                     <span class="visually-hidden"></span>
                                 </div>
+                                <div class="spinner-border text-danger" role="status"
+                                    style="width: 2rem; height: 2rem;">
+                                    <span class="visually-hidden"></span>
+                                </div>
                                 イースターエッグだよ
                                 <div class="spinner-grow text-danger" role="status" style="width: 2rem; height: 2rem;">
+                                    <span class="visually-hidden"></span>
+                                </div>
+                                <div class="spinner-border text-danger" role="status"
+                                    style="width: 2rem; height: 2rem;">
                                     <span class="visually-hidden"></span>
                                 </div>
                             </h5>
@@ -101,14 +111,14 @@
                         </div>
                         <div class="modal-body">
                             <p>
-                                これはbootstrapのmodal(赤のやつはspinner)という機能です <br>
+                                これはbootstrapのmodal(赤いやつはspinner)という機能です <br>
                                 多分内部的にはJavaScriptで実装されているはず<br>
                                 参考：<a href="https://e-words.jp/w/イースターエッグ.html">イースターエッグとは</a> <br>
                             </p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                                Close Modal
+                                Close
                             </button>
                         </div>
                     </div>
@@ -117,7 +127,8 @@
             <!-- Modal ここまで -->
 
             <!-- 真ん中に表示されるロゴ -->
-            <!-- サイズ調節(レスポンシブ対応)後でやる -->
+            <!-- BUG: 現状：ヘッダーのプルダウン時にコンテンツ一覧の一部が下にはみ出る -->
+            <!-- TODO: サイズ調節 -->
             <a href="#">
                 <img src="./image/logo-ver0001.png" alt="logo1" width="400" height="400">
             </a>
@@ -166,17 +177,52 @@
                     <h2 id="profile" class="under-line"><img src="./image/person-circle.svg" alt="person"> Profile</h2>
                     <br><br>
                     <p>
-                        Faculty of Intelligence and Informatics, B2<br>
+                        Faculty of Intelligence and Informatics, B2 <br>
                         GitHub : <a href="https://github.com/Yuto02D2-E2">
-                            <img src="./image/GitHub_cat.png" alt="GitHub" width="100" height="80">
+                            <img src="./image/GitHub_cat.png" alt="GitHub" width="140" height="100">
                         </a>
                     </p>
+                    <br>
+                    <h4>Developing Environment</h4>
+                    メイン (Laptop)
+                    <div class="ul-align-center">
+                        <ul class="ul-no-dot">
+                            <li>
+                                OS : Windows10 Pro 20H2 (build: 19042.)
+                            </li>
+                            <li>
+                                Editor : VisualStudioCode, Vim
+                            </li>
+                            <li>
+                                Shell : Git Bash on WindowsTerminal
+                            </li>
+                            <li>
+                                Virtual Machine : WSL2(Ubuntu, Kali)
+                            </li>
+                        </ul>
+                    </div>
+                    サブ (Laptop)：整備中
+                    <div class="ul-align-center">
+                        <ul class="ul-no-dot">
+                            <li>
+                                OS : Ubuntu 20.04 LTS / GNOME desktop
+                            </li>
+                            <li>
+                                Editor : Vim
+                            </li>
+                            <li>
+                                Shell : Bash
+                            </li>
+                        </ul>
+                    </div>
+                    <br><br>
                 </div>
                 <br>
             </div>
 
 
             <!-- プロダクト紹介(プロダクト無いけど) -->
+            <!-- TODO: アコーディオンを適用する -->
             <div class="products">
                 <div class="shadow-lg p-3 mb-5 bg-white rounded">
                     <h2 id="products" class="under-line"><img src="./image/grid.svg" alt="grid"> Products</h2>
@@ -187,14 +233,14 @@
                         この夏休みに作る予定．<br>
                         AtCoderの定期通知と，ユーザーが追加した任意の予定を毎朝LINEで教えてくれるものを想定している．<br>
                         言語：PythonかGo <br>
-                        技術：スクレイピング，LINEデベロッパー関連(Messaging API)，(デプロイするなら)サーバー <br>
+                        技術：スクレイピング，LINEデベロッパー関連(Messaging API)，(デプロイするなら)heroku? <br>
                     </p>
                     <h4>・Task-List (WebApp)</h4>
                     <p>
                         課題と期限をリスト表示する．<br>
                         大学のスーパーIT人材育成プロジェクトという活動を通して，人生で初めて作ったWebアプリ．<br>
                         言語：Python(Flask FrameWork), SQLite(DataBase), HTML / CSS <br>
-                        技術：スクレイピング，暗号化，Git(バージョン管理) <br>
+                        技術：スクレイピング，暗号化，Git <br>
                     </p>
                     <h4>・モグラたたき</h4>
                     <p>
@@ -214,6 +260,7 @@
                     との共同開発．<br>
                     主催者はKonken．私は主にバックエンドを担当する予定．
                     <br><br>
+                    <!-- MEMO: 漫才ロボ入れる？ -->
                 </div>
                 <br>
             </div>
@@ -225,10 +272,9 @@
                     <h2 id="programming-languages" class="under-line">
                         <img src="./image/terminal.svg" alt="terminal"> Programming Languages (I have ever used)
                     </h2>
-                    <br><br>
+                    <br><br><br>
 
                     <!-- 以下bootstrapのcardコンポーネント使用 -->
-                    <!-- サイズ調節後でやる -->
                     <div class="row row-cols-2 row-cols-md-4 g-4">
                         <div class="col">
                             <div class="card border-primary">
@@ -236,12 +282,13 @@
                                 <div class="card-body text-primary">
                                     <h5 class="card-title"><a href="https://www.python.org/">Python</a></h5>
                                     <p class="card-text">
-                                        <span class="badge rounded-pill bg-light text-dark">love</span>
-                                        <span class="badge rounded-pill bg-light text-dark">useful</span>
-                                        <span class="badge rounded-pill bg-light text-dark">WebApp</span>
-                                        <span class="badge rounded-pill bg-light text-dark">AtCoder / ICPC</span>
+                                        <span class="badge rounded-pill bg-light text-dark">一番書きやすい</span>
+                                        <span class="badge rounded-pill bg-light text-dark">好き</span>
+                                        <span class="badge rounded-pill bg-light text-dark">競プロ</span>
+                                        <span class="badge rounded-pill bg-light text-dark">Webアプリ</span>
                                         <span class="badge rounded-pill bg-light text-dark">DeepLearning</span>
-                                        <span class="badge rounded-pill bg-light text-dark">slowly</span>
+                                        <span class="badge rounded-pill bg-light text-dark">大学/講義</span>
+                                        <span class="badge rounded-pill bg-light text-dark">大学/superIT</span>
                                     </p>
                                 </div>
                             </div>
@@ -252,11 +299,10 @@
                                 <div class="card-body text-primary">
                                     <h5 class="card-title">C Language</h5>
                                     <p class="card-text">
-                                        <span class="badge rounded-pill bg-light text-dark">like</span>
-                                        <span class="badge rounded-pill bg-light text-dark">low-level</span>
+                                        <span class="badge rounded-pill bg-light text-dark">好き</span>
                                         <span class="badge rounded-pill bg-light text-dark">Algorithm</span>
                                         <span class="badge rounded-pill bg-light text-dark">DataStructure</span>
-                                        <span class="badge rounded-pill bg-light text-dark">fast</span>
+                                        <span class="badge rounded-pill bg-light text-dark">大学/講義</span>
                                     </p>
                                 </div>
                             </div>
@@ -267,9 +313,8 @@
                                 <div class="card-body text-primary">
                                     <h5 class="card-title">C++ Language</h5>
                                     <p class="card-text">
-                                        <span class="badge rounded-pill bg-light text-dark">AtCoder / ICPC</span>
-                                        <span class="badge rounded-pill bg-light text-dark">AI</span>
-                                        <span class="badge rounded-pill bg-light text-dark">fast</span>
+                                        <span class="badge rounded-pill bg-light text-dark">競プロ</span>
+                                        <span class="badge rounded-pill bg-light text-dark">大学/superIT</span>
                                     </p>
                                 </div>
                             </div>
@@ -280,10 +325,9 @@
                                 <div class="card-body text-primary">
                                     <h5 class="card-title"><a href="https://www.rust-lang.org/ja/">Rust</a></h5>
                                     <p class="card-text">
-                                        <span class="badge rounded-pill bg-light text-dark">now studying</span>
-                                        <span class="badge rounded-pill bg-light text-dark">difficult</span>
-                                        <span class="badge rounded-pill bg-light text-dark">low-level</span>
-                                        <span class="badge rounded-pill bg-light text-dark">fast</span>
+                                        <span class="badge rounded-pill bg-light text-dark">好き</span>
+                                        <span class="badge rounded-pill bg-light text-dark">勉強中</span>
+                                        <span class="badge rounded-pill bg-light text-dark">難しい</span>
                                     </p>
                                 </div>
                             </div>
@@ -294,7 +338,7 @@
                                 <div class="card-body text-primary">
                                     <h5 class="card-title"><a href="https://golang.org/">Go Lang</a></h5>
                                     <p class="card-text">
-                                        <span class="badge rounded-pill bg-light text-dark">now studying</span>
+                                        <span class="badge rounded-pill bg-light text-dark">勉強中</span>
                                     </p>
                                 </div>
                             </div>
@@ -305,9 +349,9 @@
                                 <div class="card-body text-primary">
                                     <h5 class="card-title">Assembly</h5>
                                     <p class="card-text">
-                                        <span class="badge rounded-pill bg-light text-dark">like</span>
-                                        <span class="badge rounded-pill bg-light text-dark">low-level</span>
-                                        <span class="badge rounded-pill bg-light text-dark">now studying</span>
+                                        <span class="badge rounded-pill bg-light text-dark">x86 / intel</span>
+                                        <span class="badge rounded-pill bg-light text-dark">低レイヤも興味ある</span>
+                                        <span class="badge rounded-pill bg-light text-dark">勉強中</span>
                                     </p>
                                 </div>
                             </div>
@@ -318,7 +362,7 @@
                                 <div class="card-body text-primary">
                                     <h5 class="card-title"><a href="https://processing.org/">Processing</a></h5>
                                     <p class="card-text">
-                                        <span class="badge rounded-pill bg-light text-dark">useless</span>
+                                        <span class="badge rounded-pill bg-light text-dark">大学/講義</span>
                                     </p>
                                 </div>
                             </div>
@@ -329,19 +373,20 @@
                                 <div class="card-body text-primary">
                                     <h5 class="card-title"><a href="https://www.java.com/ja/">Java</a></h5>
                                     <p class="card-text">
-                                        <span class="badge rounded-pill bg-light text-dark">future</span>
-                                        <span class="badge rounded-pill bg-light text-dark">object-oriented</span>
+                                        <span class="badge rounded-pill bg-light text-dark">大学/講義</span>
+                                        <span class="badge rounded-pill bg-light text-dark">あまり興味が湧かない</span>
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <br>
                 </div>
                 <br>
             </div>
 
 
-            <!-- その他(主にこのサイトについての説明) ここから -->
+            <!-- その他(このページの説明など)  -->
             <div class="other">
                 <div class="shadow-lg p-3 mb-5 bg-white rounded">
                     <h2 id="other" class="under-line"><img src="./image/info-circle.svg" alt="info"> other</h2>
@@ -351,6 +396,24 @@
                         This site is hosted by github pages. <br>
                         The language used is html and css. Also, using a css library called Bootstrap. <br>
                     </p>
+                    <br>
+                    <h3 class="highlight"> points of attention </h3>
+                    <div class="ul-align-center">
+                        <ul class="poa">
+                            <li>
+                                <font size="5">Simple</font> file configuration with only index.html and style.css
+                            </li>
+                            <li>
+                                <font size="5">Responsive</font> support for PC, SmartPhone, etc
+                            </li>
+                            <li>
+                                Simple and <font size="5">beautiful</font> look with minimal bootstrap
+                            </li>
+                            <li>
+                                Secret elements such as <font size="5">EasterEgg</font>
+                            </li>
+                        </ul>
+                    </div>
                     <br>
                     ここまで見た人お疲れさまでした．
                     <a href="https://yuto02d2-e2.github.io/raw.html">
