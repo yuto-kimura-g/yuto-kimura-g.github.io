@@ -53,9 +53,32 @@ div.ul-align-center {
     text-align: center;
 }
 /* ulのクラス */
-ul.ul-no-dot {
-    list-style-type: none;
+ul.ul-bar-style {
+    list-style-type: '-';
 }
 ul.poa {
     list-style-type: decimal;
+}
+
+
+/* アコーディオン(product)部分 */
+.accordion-body {
+    text-align: left;
+}
+@media screen and (min-width: 960px) { /* 幅が960以上(PC)に適用される */
+/*
+    レスポンシブ対応の時の基準サイズ
+    - 480px：スマホ
+    480px - 960px：タブレット
+    960px - ：PC
+    らしい．知らんけど
+ */
+    .private-project {
+        margin-right:150px;
+        margin-left:150px;
+    }
+    .collaboration-development{
+        margin-right:150px;
+        margin-left:150px;
+    }
 }

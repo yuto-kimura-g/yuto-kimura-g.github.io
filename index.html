@@ -98,12 +98,26 @@
                                     style="width: 2rem; height: 2rem;">
                                     <span class="visually-hidden"></span>
                                 </div>
-                                イースターエッグだよ
                                 <div class="spinner-grow text-danger" role="status" style="width: 2rem; height: 2rem;">
                                     <span class="visually-hidden"></span>
                                 </div>
                                 <div class="spinner-border text-danger" role="status"
                                     style="width: 2rem; height: 2rem;">
+                                    <span class="visually-hidden"></span>
+                                </div>
+                                <br>イースターエッグだよ<br>
+                                <div class="spinner-border text-danger" role="status"
+                                    style="width: 2rem; height: 2rem;">
+                                    <span class="visually-hidden"></span>
+                                </div>
+                                <div class="spinner-grow text-danger" role="status" style="width: 2rem; height: 2rem;">
+                                    <span class="visually-hidden"></span>
+                                </div>
+                                <div class="spinner-border text-danger" role="status"
+                                    style="width: 2rem; height: 2rem;">
+                                    <span class="visually-hidden"></span>
+                                </div>
+                                <div class="spinner-grow text-danger" role="status" style="width: 2rem; height: 2rem;">
                                     <span class="visually-hidden"></span>
                                 </div>
                             </h5>
@@ -186,7 +200,7 @@
                     <h4>Developing Environment</h4>
                     メイン (Laptop)
                     <div class="ul-align-center">
-                        <ul class="ul-no-dot">
+                        <ul class="ul-bar-style">
                             <li>
                                 OS : Windows10 Pro 20H2 (build: 19042.)
                             </li>
@@ -203,7 +217,7 @@
                     </div>
                     サブ (Laptop)：整備中
                     <div class="ul-align-center">
-                        <ul class="ul-no-dot">
+                        <ul class="ul-bar-style">
                             <li>
                                 OS : Ubuntu 20.04 LTS / GNOME desktop
                             </li>
@@ -221,46 +235,125 @@
             </div>
 
 
-            <!-- プロダクト紹介(プロダクト無いけど) -->
-            <!-- TODO: アコーディオンを適用する -->
+            <!-- プロダクト紹介(載せるほどのプロダクト無いけど) -->
             <div class="products">
                 <div class="shadow-lg p-3 mb-5 bg-white rounded">
                     <h2 id="products" class="under-line"><img src="./image/grid.svg" alt="grid"> Products</h2>
                     <br><br>
-                    <h3>Private Project</h3>
-                    <h4>・Reminder (LINE Bot)</h4>
-                    <p>
-                        この夏休みに作る予定．<br>
-                        AtCoderの定期通知と，ユーザーが追加した任意の予定を毎朝LINEで教えてくれるものを想定している．<br>
-                        言語：PythonかGo <br>
-                        技術：スクレイピング，LINEデベロッパー関連(Messaging API)，(デプロイするなら)heroku? <br>
-                    </p>
-                    <h4>・Task-List (WebApp)</h4>
-                    <p>
-                        課題と期限をリスト表示する．<br>
-                        大学のスーパーIT人材育成プロジェクトという活動を通して，人生で初めて作ったWebアプリ．<br>
-                        言語：Python(Flask FrameWork), SQLite(DataBase), HTML / CSS <br>
-                        技術：スクレイピング，暗号化，Git <br>
-                    </p>
-                    <h4>・モグラたたき</h4>
-                    <p>
-                        大学1年の前期に，授業の最終課題で作った作品．くそげー <br>
-                        人生で初めてのプログラミングだったから，思い入れはある <br>
-                        言語：Processing <br>
-                        技術：無し <br>
-                    </p>
-                    <br>
-
-                    <h3>Collaboration Development</h3>
-                    <h4>・TripNavi (WebApp)</h4>
-                    大学の友達
-                    <a href="https://github.com/konnyakuken">Konken</a>,
-                    <a href="https://github.com/Haru39M">Haru39M</a>,
-                    <a href="https://github.com/mittan1330">mit1330</a>
-                    との共同開発．<br>
-                    主催者はKonken．私は主にバックエンドを担当する予定．
+                    <div class="private-project">
+                        <h3>Private Project</h3>
+                        <!-- 以下bootstrapのaccordionコンポーネント使用 -->
+                        <div class="accordion accordion-flush" id="private-project">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#private-1" aria-expanded="false" aria-controls="private-1">
+                                        1. Reminder (LINE Bot)
+                                    </button>
+                                </h2>
+                                <div id="private-1" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingOne" data-bs-parent="#private-project">
+                                    <div class="accordion-body">
+                                        この夏休みに作る予定．AtCoderの定期通知と，ユーザーが追加した任意の予定を毎朝LINEで教えてくれるものを想定している．<br>
+                                        <br>
+                                        言語：PythonかGo <br>
+                                        技術：スクレイピング，LINEデベロッパー関連(Messaging API)，(デプロイするなら)heroku? <br>
+                                        作成期間： 2021/?? - <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#private-2" aria-expanded="false" aria-controls="private-2">
+                                        2. Task-List (WebApp)
+                                    </button>
+                                </h2>
+                                <div id="private-2" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingTwo" data-bs-parent="#private-project">
+                                    <div class="accordion-body">
+                                        課題と期限をリスト表示する．大学のスーパーIT人材育成プロジェクトという活動で作ったWebアプリ．<br>
+                                        このプロジェクトに参加する前は授業で習ったProcessingが少し書ける程度で，PythonもデータベースもHTML/CSSもGitも何もかも初めてだった．<br>
+                                        そもそも設計の仕方とかググり方すら分からなかったから，大変だったけど沢山のことを学べた <br>
+                                        <br>
+                                        言語：Python(Flask FrameWork), SQLite(DataBase), HTML / CSS <br>
+                                        技術：スクレイピング，暗号化，Git <br>
+                                        作成期間： 2020/10 - 2021/02<br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#private-3" aria-expanded="false" aria-controls="private-3">
+                                        3. もぐらたたき (GUI/Desktop App)
+                                    </button>
+                                </h2>
+                                <div id="private-3" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingThree" data-bs-parent="#private-project">
+                                    <div class="accordion-body">
+                                        大学1年の前期に，授業の最終課題で作った作品．<br>
+                                        当時は必死に作ってたけど，改めて見るとごみ．<br>
+                                        人生で初めてのプログラミングだったから，思い入れはある <br>
+                                        <br>
+                                        言語：Processing <br>
+                                        技術：無し <br>
+                                        作成期間： 2020/07<br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <br><br>
-                    <!-- MEMO: 漫才ロボ入れる？ -->
+
+                    <div class="collaboration-development">
+                        <h3>Collaboration Development</h3>
+                        <div class="accordion accordion-flush" id="collabo-dev">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collabo-1" aria-expanded="false" aria-controls="collabo-1">
+                                        1. TripNavi (WebApp)
+                                    </button>
+                                </h2>
+                                <div id="collabo-1" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingOne" data-bs-parent="#collabo-dev">
+                                    <div class="accordion-body">
+                                        大学の友達
+                                        <a href="https://github.com/konnyakuken">Konken</a>,
+                                        <a href="https://github.com/Haru39M">Haru39M</a>,
+                                        <a href="https://github.com/mittan1330">mit1330</a>
+                                        との共同開発．<br>
+                                        主催者はKonken．私は主にバックエンドを担当する予定．<br>
+                                        <br>
+                                        言語：Python <br>
+                                        技術：？？ <br>
+                                        作成期間： 2021/08<br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collabo-2" aria-expanded="false" aria-controls="collabo-2">
+                                        2. 漫才ロボ
+                                    </button>
+                                </h2>
+                                <div id="collabo-2" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingTwo" data-bs-parent="#collabo-dev">
+                                    <div class="accordion-body">
+                                        甲南大学プレミアプロジェクトの一つ．<br>
+                                        私はソフトウェア班で，主に漫才の内容の生成に携わっている <br>
+                                        <br>
+                                        言語：Python <br>
+                                        技術：形態素解析とか <br>
+                                        作成期間： 2021/04 - ??<br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
                 </div>
                 <br>
             </div>
@@ -314,6 +407,7 @@
                                     <h5 class="card-title">C++ Language</h5>
                                     <p class="card-text">
                                         <span class="badge rounded-pill bg-light text-dark">競プロ</span>
+                                        <span class="badge rounded-pill bg-light text-dark">勉強中</span>
                                         <span class="badge rounded-pill bg-light text-dark">大学/superIT</span>
                                     </p>
                                 </div>
@@ -380,7 +474,11 @@
                             </div>
                         </div>
                     </div>
-                    <br>
+                    <br><br>
+                    <font size="3">
+                        プログラミング言語ではないけど，HTML/CSSとShellScriptもある程度は書けるよ
+                    </font>
+                    <br><br><br>
                 </div>
                 <br>
             </div>
