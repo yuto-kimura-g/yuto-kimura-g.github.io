@@ -12,7 +12,8 @@
         <!-- 表示されない情報の設定，ライブラリ？ / CSS読み込みなど -->
         <title>ぎっとはぶあいおーのテスト</title>
 
-        <!-- TODO: meta?タグで検索エンジンが見つけられるように設定 -->
+        <!-- 検索エンジンが見つけられるように設定 -->
+        <meta name="google-site-verification" content="OX7lHckWf0GsC9AE4XOnIOHvhhnToanX58DFT5ZSSC0" />
 
         <!-- 以下bootstrapのテンプレート -->
         <!-- Required meta tags -->
@@ -22,8 +23,6 @@
             integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
         <!-- ユーザー定義のCSS(フォント，画像の微調整など)．bootstrapの下に書かないといけない -->
-        <!-- bootstrapは無事に反映されたけど，何故かユーザー定義のstyle.cssが反映されなくなった．フォントとかは絶対変えたいからこれは困る -->
-        <!-- → cssでhtml {}をbody {} に変えたらいけた．何故なのかは知らない -->
         <link rel="stylesheet" href="style.css">
     </head>
 
@@ -205,13 +204,16 @@
                                 OS : Windows10 Pro 20H2 (build: 19042.)
                             </li>
                             <li>
-                                Editor : VisualStudioCode, Vim
+                                Editor : VisualStudioCode, Vim, IntelliJ IDEA
                             </li>
                             <li>
                                 Shell : Git Bash on WindowsTerminal
                             </li>
                             <li>
                                 Virtual Machine : WSL2(Ubuntu, Kali)
+                            </li>
+                            <li>
+                                Font : Myrica M
                             </li>
                         </ul>
                     </div>
@@ -498,11 +500,12 @@
                     <h3 class="highlight"> points of attention </h3>
                     <div class="ul-align-center">
                         <ul class="poa">
+                            <!-- TODO: 文字の強調を強くする(スマホとかでフォントによってはあまり差がついてない) -->
                             <li>
                                 <font size="5">Simple</font> file configuration with only index.html and style.css
                             </li>
                             <li>
-                                <font size="5">Responsive</font> support for PC, SmartPhone, etc
+                                <font size="5">Responsive</font> support for PC, SmartPhone, and so on
                             </li>
                             <li>
                                 Simple and <font size="5">beautiful</font> look with minimal bootstrap
