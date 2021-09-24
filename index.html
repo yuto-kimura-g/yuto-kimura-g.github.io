@@ -13,7 +13,7 @@
         <title>ぎっとはぶあいおーのテスト</title>
 
         <!-- 検索エンジンが見つけられるように設定 -->
-        <meta name="google-site-verification" content="OX7lHckWf0GsC9AE4XOnIOHvhhnToanX58DFT5ZSSC0" />
+        <!-- <meta name="google-site-verification" content="OX7lHckWf0GsC9AE4XOnIOHvhhnToanX58DFT5ZSSC0" /> -->
 
         <!-- 以下bootstrapのテンプレート -->
         <!-- Required meta tags -->
@@ -24,6 +24,15 @@
 
         <!-- ユーザー定義のCSS(フォント，画像の微調整など)．bootstrapの下に書かないといけない -->
         <link rel="stylesheet" href="style.css">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DYPG3M2HNG"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-DYPG3M2HNG');
+        </script>
     </head>
 
 
@@ -250,17 +259,19 @@
                                 <h2 class="accordion-header" id="flush-headingOne">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#private-1" aria-expanded="false" aria-controls="private-1">
-                                        1. Reminder (LINE Bot)
+                                        1. もぐらたたき (GUI/Desktop App)
                                     </button>
                                 </h2>
                                 <div id="private-1" class="accordion-collapse collapse"
                                     aria-labelledby="flush-headingOne" data-bs-parent="#private-project">
                                     <div class="accordion-body">
-                                        この夏休みに作る予定．AtCoderの定期通知と，ユーザーが追加した任意の予定を毎朝LINEで教えてくれるものを想定している．<br>
+                                        大学1年の前期に，授業の最終課題で作った作品．<br>
+                                        当時は必死に作ってたけど，改めて見るとごみ．<br>
+                                        人生で初めてのプログラミングだったから，思い入れはある <br>
                                         <br>
-                                        言語：PythonかGo <br>
-                                        技術：スクレイピング，LINEデベロッパー関連(Messaging API)，(デプロイするなら)heroku? <br>
-                                        作成期間： 2021/?? - <br>
+                                        言語：Processing <br>
+                                        技術：無し <br>
+                                        作成期間： 2020/07<br>
                                     </div>
                                 </div>
                             </div>
@@ -288,19 +299,22 @@
                                 <h2 class="accordion-header" id="flush-headingThree">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#private-3" aria-expanded="false" aria-controls="private-3">
-                                        3. もぐらたたき (GUI/Desktop App)
+                                        3. Digital Clock (WebApp)
                                     </button>
                                 </h2>
                                 <div id="private-3" class="accordion-collapse collapse"
                                     aria-labelledby="flush-headingThree" data-bs-parent="#private-project">
                                     <div class="accordion-body">
-                                        大学1年の前期に，授業の最終課題で作った作品．<br>
-                                        当時は必死に作ってたけど，改めて見るとごみ．<br>
-                                        人生で初めてのプログラミングだったから，思い入れはある <br>
+                                        <p>
+                                            この作品は<a href="https://yuto02d2-e2.github.io/DigitalClock/">ここから</a>見れます
+                                        </p>
+                                        HTML/CSS/JavaScriptの練習で作ったもの．<br>
+                                        Bootstrap等の便利なライブラリを一切使わずに車輪の再開発をした．<br>
+                                        かなりいろんなことを学べたので満足 <br>
                                         <br>
-                                        言語：Processing <br>
-                                        技術：無し <br>
-                                        作成期間： 2020/07<br>
+                                        言語：HTML, CSS, JavaScript <br>
+                                        技術：Github Pages, Google Analytics <br>
+                                        作成期間： 2021/09/23 - 2021/09/24<br>
                                     </div>
                                 </div>
                             </div>
@@ -330,7 +344,7 @@
                                         <br>
                                         言語：Python <br>
                                         技術：？？ <br>
-                                        作成期間： 2021/08<br>
+                                        作成期間： 2021/?? - <br>
                                     </div>
                                 </div>
                             </div>
@@ -441,12 +455,12 @@
                         </div>
                         <div class="col">
                             <div class="card border-primary">
-                                <img src="./image/" alt="No Image" class="card-img-top">
+                                <img src="./image/Javascript.jpg" alt="JavaScript" class="card-img-top">
                                 <div class="card-body text-primary">
-                                    <h5 class="card-title">Assembly</h5>
+                                    <h5 class="card-title"><a
+                                            href="https://developer.mozilla.org/ja/docs/Web/JavaScript">JavaScript</a>
+                                    </h5>
                                     <p class="card-text">
-                                        <span class="badge rounded-pill bg-light text-dark">x86 / intel</span>
-                                        <span class="badge rounded-pill bg-light text-dark">低レイヤも興味ある</span>
                                         <span class="badge rounded-pill bg-light text-dark">勉強中</span>
                                     </p>
                                 </div>
@@ -469,8 +483,8 @@
                                 <div class="card-body text-primary">
                                     <h5 class="card-title"><a href="https://www.java.com/ja/">Java</a></h5>
                                     <p class="card-text">
+                                        <span class="badge rounded-pill bg-light text-dark">勉強中</span>
                                         <span class="badge rounded-pill bg-light text-dark">大学/講義</span>
-                                        <span class="badge rounded-pill bg-light text-dark">あまり興味が湧かない</span>
                                     </p>
                                 </div>
                             </div>
