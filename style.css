@@ -87,7 +87,7 @@ div.main-content-board:hover {
 }
 main h2 {
     display: inline-block;
-    background: linear-gradient(transparent 50%, var(--theme-color) 50%);
+    background: linear-gradient(transparent 0%, var(--theme-color) 50%);
     font-weight: 500;
     padding: 0 10px;
 }
@@ -98,7 +98,7 @@ main h4::after {
     content: "/";
 }
 div.main-content-block {
-    margin: 75px 0;
+    margin: 75px 20px;
 }
 main li.custom-ul-set::before {
     content: "- ";

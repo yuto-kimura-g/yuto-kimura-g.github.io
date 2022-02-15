@@ -2,7 +2,7 @@
 
 @charset "UTF-8";
 
-/* @media screen and (min-width: 512px) { */
+
 @media screen and (min-width: 960px) {
     body {
         font-size: 20px;
