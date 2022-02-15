@@ -1,84 +1,118 @@
-/*
- * this is comment text.
- * write by Yuto02D2-E2 since 2021/07/30
- */
+/* 2022/02/15@Yuto02D2 */
 
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Klee+One:wght@600&display=swap');
+
+:root {
+    --theme-color: rgba(176, 196, 222, 0.5);
+}
+* {
+    /*
+    margin:要素外の余白
+    padding:要素内の余白
+    引数は
+    ・<上下> <左右>
+    ・<上> <左右> <下>
+    ・上から時計回り
+    */
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
 
 body {
-    font-family: cursive, Verdana, Osaka, Arial, メイリオ;
-    font-size: large;
+    font-family: 'Source Code Pro', 'Klee One', monospace;
+    align-items: center;
     text-align: center;
 }
-
-header {
-    background-image: url(./image/background-water.png);
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 800px;
+.container {
+    width: 80vw;
+    margin: 0 auto;
 }
-
-a#page-link {
-    color: white;
-    font-size: larger;
+a {
+    color: black;
+    text-decoration: none;
 }
-
-.nav-item {
+a:hover {
+    background-color: var(--theme-color);
+    text-decoration: underline;
+}
+div.custom-ul-set {
     text-align: center;
 }
-
-h2.under-line {
-    display: inline-block;
-    border-bottom: 5px solid #c0c0c0;
-}
-h3.highlight {
-    display: inline-block;
-    background: linear-gradient(transparent 50%, #a8eaff 50%);
-}
-
-footer {
-    background-color: rgba(176, 196, 222, 0.5);
-}
-
-
-/* リスト全体を画面の中央に配置，各リストの要素は左揃えにするためのセット */
-ul {
+ul.custom-ul-set {
     display: inline-block;
     text-align: left;
     list-style-position: inside;
 }
-/* divのクラス*/
-div.ul-align-center {
-    text-align: center;
-}
-/* ulのクラス */
-ul.ul-bar-style {
-    list-style-type: '-';
-}
-ul.poa {
-    list-style-type: decimal;
+li.custom-ul-set {
+    list-style: none;
+    margin: 5px 0;
 }
 
 
-/* アコーディオン(product)部分 */
-.accordion-body {
-    text-align: left;
+header { /* 背景画像 */
+    background-image: url(./images/header-background.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
-@media screen and (min-width: 960px) { /* 幅が960以上(PC)に適用される */
-/*
-    レスポンシブ対応の時の基準サイズ
-    - 480px：スマホ
-    480px - 960px：タブレット
-    960px - ：PC
-    らしい．知らんけど
- */
-    .private-project {
-        margin-right:150px;
-        margin-left:150px;
-    }
-    .collaboration-development{
-        margin-right:150px;
-        margin-left:150px;
-    }
+img#header-logo {
+    margin-top: 25vh;
+    height: auto;
+    border-radius: 50%;
+}
+img.header-content-logo {
+    width: 20px;
+    height: 20px;
+}
+figure.container {
+    padding-bottom: 40px;
+}
+ul.header-content-ul {
+    background-color: rgba(250, 253, 255, 0.4);
+}
+
+
+div.main-content-board {
+    margin: 100px 0;
+    padding: 50px 0;
+    border-radius: 10px;
+    border: solid 2px var(--theme-color);
+    box-shadow: var(--theme-color) 10px 10px 10px;
+}
+div.main-content-board:hover {
+    box-shadow: none;
+}
+main h2 {
+    display: inline-block;
+    background: linear-gradient(transparent 50%, var(--theme-color) 50%);
+    font-weight: 500;
+    padding: 0 10px;
+}
+main h3 {
+    margin: 10px 0;
+}
+main h4::after {
+    content: "/";
+}
+div.main-content-block {
+    margin: 75px 0;
+}
+main li.custom-ul-set::before {
+    content: "- ";
+}
+img#easter-egg {
+    max-width: 80vw;
+    height: auto;
+}
+
+
+footer {
+    padding: 30px 0;
+    background-color: var(--theme-color);
+}
+p.copyright {
+    margin: 0 10px;
 }

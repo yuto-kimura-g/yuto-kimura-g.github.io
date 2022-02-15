@@ -1,580 +1,194 @@
-<!--
-    this is comment text.
-    write by Yuto02D2-E2 since 2021/07/30
--->
-
-
 <!DOCTYPE html>
 <html lang="ja">
-
+    <!-- 2022/02/15@Yuto02D2 -->
 
     <head>
-        <!-- 表示されない情報の設定，ライブラリ？ / CSS読み込みなど -->
-        <title>ぎっとはぶあいおーのテスト</title>
-
-        <!-- 検索エンジンが見つけられるように設定 -->
-        <!-- <meta name="google-site-verification" content="OX7lHckWf0GsC9AE4XOnIOHvhhnToanX58DFT5ZSSC0" /> -->
-
-        <!-- 以下bootstrapのテンプレート -->
-        <!-- Required meta tags -->
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HomePage</title>
+        <link rel="shortcut icon" href="./images/favicon.png">
 
-        <!-- ユーザー定義のCSS(フォント，画像の微調整など)．bootstrapの下に書かないといけない -->
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./style.pc.css">
+        <link rel="stylesheet" href="./style.smartphone.css">
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
+        <!--  TODO: 完成したらコメントアウトを外す
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-DYPG3M2HNG"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag() { dataLayer.push(arguments); }
             gtag('js', new Date());
             gtag('config', 'G-DYPG3M2HNG');
-        </script>
+        </script> -->
+
+        <!-- TODO: site map作る？ -->
     </head>
 
-
-
     <body>
-        <!-- ####################################### ここからヘッダー ############################################### -->
         <header>
-            <!-- 以下bootstrapのnavbar -->
-            <nav class="navbar navbar-light bg-light">
-                <div class="container-fluid">
-                    <a href="https://yuto02d2-e2.github.io/" class="navbar-brand">
-                        <img src="./image/logo-ver0001.png" alt="logo" width="80" height="80">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a href="http://www.google.com/" class="nav-link">
-                                    <img src="./image/search.svg" alt="ggrks"> (◍＞◡＜◍)。ggrks ✧♡
-                                </a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    ??? (ﾟ∀ﾟ) ???
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li class="nav-item">
-                                        <a href="http://www.google.com/search?q=今何時" class="dropdown-item">
-                                            <img src="./image/clock.svg" alt="clock">
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="https://www.google.com/search?q=今日の天気" class="dropdown-item">
-                                            <img src="./image/thermometer-sun.svg" alt="sun">
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="https://www.google.com/search?q=パックマン" class="dropdown-item">
-                                            <img src="./image/controller.svg" alt="game">
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <!-- EasterEgg -->
-                                        <a href="#EasterEgg" data-bs-toggle="modal" class="dropdown-item">
-                                            <img src="./image/bug.svg" alt="bug">
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <!-- navbarここまで -->
+            <figure class="container">
+                <img id="header-logo" src="./images/header-logo.png" alt="logo">
+                <figcaption>Yuto02D2</figcaption>
+            </figure>
 
-            <!-- Modalの定義，設定など -->
-            <div class="modal fade" id="EasterEgg" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">
-                                <div class="spinner-grow text-danger" role="status" style="width: 2rem; height: 2rem;">
-                                    <span class="visually-hidden"></span>
-                                </div>
-                                <div class="spinner-border text-danger" role="status"
-                                    style="width: 2rem; height: 2rem;">
-                                    <span class="visually-hidden"></span>
-                                </div>
-                                <div class="spinner-grow text-danger" role="status" style="width: 2rem; height: 2rem;">
-                                    <span class="visually-hidden"></span>
-                                </div>
-                                <div class="spinner-border text-danger" role="status"
-                                    style="width: 2rem; height: 2rem;">
-                                    <span class="visually-hidden"></span>
-                                </div>
-                                <br>イースターエッグだよ<br>
-                                <div class="spinner-border text-danger" role="status"
-                                    style="width: 2rem; height: 2rem;">
-                                    <span class="visually-hidden"></span>
-                                </div>
-                                <div class="spinner-grow text-danger" role="status" style="width: 2rem; height: 2rem;">
-                                    <span class="visually-hidden"></span>
-                                </div>
-                                <div class="spinner-border text-danger" role="status"
-                                    style="width: 2rem; height: 2rem;">
-                                    <span class="visually-hidden"></span>
-                                </div>
-                                <div class="spinner-grow text-danger" role="status" style="width: 2rem; height: 2rem;">
-                                    <span class="visually-hidden"></span>
-                                </div>
-                            </h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <p>
-                                これはbootstrapのmodal(赤いやつはspinner)という機能です <br>
-                                多分内部的にはJavaScriptで実装されているはず<br>
-                                参考：<a href="https://e-words.jp/w/イースターエッグ.html">イースターエッグとは</a> <br>
-                            </p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                                Close
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Modal ここまで -->
-
-            <!-- 真ん中に表示されるロゴ -->
-            <!-- BUG: 現状：ヘッダーのプルダウン時にコンテンツ一覧の一部が下にはみ出る -->
-            <!-- TODO: サイズ調節 -->
-            <a href="#">
-                <img src="./image/logo-ver0001.png" alt="logo1" width="400" height="400">
-            </a>
-
-            <!-- コンテンツ一覧．ページ内へのリンク -->
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link" id="page-link" href="#profile">
-                        <img src="./image/person-circle.svg" alt="person"> Profile
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="page-link" href="#products">
-                        <img src="./image/grid.svg" alt="grid"> Products
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="page-link" href="#programming-languages">
-                        <img src="./image/terminal.svg" alt="terminal"> Programming Languages
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="page-link" href="#other">
-                        <img src="./image/info-circle.svg" alt="info"> Other
-                    </a>
-                </li>
-            </ul>
-        </header>
-        <!-- ###################################### ヘッダー ここまで ################################################# -->
-
-
-
-        <!-- ######################################## 本体ここから ##################################################### -->
-        <div class="main">
-            <br><br><br>
-            <p>
-                github io test. this is my first site.<br>
-                in the future, I might use this site as a portfolio.
-            </p>
-            <br><br><br>
-
-
-            <!-- プロフィール -->
-            <div class="profile">
-                <div class="shadow-lg p-3 mb-5 bg-white rounded">
-                    <h2 id="profile" class="under-line"><img src="./image/person-circle.svg" alt="person"> Profile</h2>
-                    <br><br>
-                    <p>
-                        Faculty of Intelligence and Informatics, B2 <br>
-                        GitHub : <a href="https://github.com/Yuto02D2-E2">
-                            <img src="./image/GitHub_cat.png" alt="GitHub" width="140" height="100">
+            <div class="container custom-ul-set">
+                <ul class="header-content-ul">
+                    <li class="header-content-li">
+                        <a href="#toggle-profile">
+                            <img class="header-content-logo" src="./images/profile-logo.svg" alt="profile logo">
+                            Profile
                         </a>
-                    </p>
-                    <br>
-                    <h4>Developing Environment</h4>
-                    メイン (Laptop)
-                    <div class="ul-align-center">
-                        <ul class="ul-bar-style">
-                            <li>
-                                OS : Windows10 Pro 20H2 (build: 19042.)
-                            </li>
-                            <li>
-                                Editor : VisualStudioCode, Vim, IntelliJ IDEA
-                            </li>
-                            <li>
-                                Shell : Git Bash on WindowsTerminal
-                            </li>
-                            <li>
-                                Virtual Machine : WSL2(Ubuntu, Kali)
-                            </li>
-                            <li>
-                                Font : Myrica M
+                    </li>
+                    <li class="header-content-li">
+                        <a href="#toggle-develop-environment">
+                            <img class="header-content-logo" src="./images/develop-environment-logo.svg"
+                                alt="develop-environment logo">
+                            Develop Environment
+                        </a>
+                    </li>
+                    <li class="header-content-li">
+                        <a href="#toggle-experience">
+                            <img class="header-content-logo" src="./images/experience-logo.svg" alt="experience logo">
+                            Experience
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+
+        <main class="container">
+            <!-- TODO: Profile -->
+            <div id="toggle-profile" class="main-content-board">
+                <h2>
+                    <img src="./images/profile-logo.svg" alt="profile logo">
+                    Profile
+                </h2>
+                <section id="profile-section">
+                    <div class="custom-ul-set main-content-block">
+                        <ul class="custom-ul-set">
+                            <li class="custom-ul-set">知能情報学部 知能情報学科 ２年</li>
+                            <li class="custom-ul-set">
+                                <a href="https://github.com/yuto02d2-e2/" target="_blank">
+                                    GitHubアカウント
+                                    <img src="./images/github-logo.svg" alt="github-logo">
+                                    (Yuto02D2-E2)
+                                </a>
                             </li>
                         </ul>
                     </div>
-                    サブ (Laptop)：整備中
-                    <div class="ul-align-center">
-                        <ul class="ul-bar-style">
-                            <li>
-                                OS : Ubuntu 20.04 LTS / GNOME desktop
+                </section>
+            </div>
+
+            <!-- TODO: Develop Environment -->
+            <div id="toggle-develop-environment" class="main-content-board">
+                <h2>
+                    <img src="./images/develop-environment-logo.svg" alt="develop-environment logo">
+                    Develop Environment
+                </h2>
+                <section id="develop-environment-section">
+                    <div class="custom-ul-set main-content-block">
+                        <ul class="custom-ul-set">
+                            <h4 class="left-align">OS</h4>
+                            <li class="custom-ul-set">Windows10 Pro (main)</li>
+                            <li class="custom-ul-set">Ubuntu Desktop 20.04LTS (sub)</li>
+                            <br>
+                            <h4 class="left-align">Editor</h4>
+                            <li class="custom-ul-set">Visual Studio Code</li>
+                            <li class="custom-ul-set">Vim</li>
+                        </ul>
+                    </div>
+                    <div class="main-content-block">
+                        <a href="https://github.com/Yuto02D2-E2/SettingFiles" target="_blank">
+                            <img src="./images/github-logo.svg" alt="github-logo">
+                            dotfiles(整備中)
+                        </a>
+                        <br>
+                        ワンライナーで環境構築を出来るようにしたくて，<br>
+                        無限に時間を溶かしている
+                    </div>
+                </section>
+            </div>
+
+            <!-- TODO: Experience -->
+            <div id="toggle-experience" class="main-content-board">
+                <h2>
+                    <img src="./images/experience-logo.svg" alt="experience logo">
+                    Experience
+                </h2>
+                <section id="experience-section">
+                    <div class="custom-ul-set main-content-block">
+                        <h3 class="left-align">University</h3>
+                        <ul class="custom-ul-set">
+                            <h4 class="left-align">スーパーITプロジェクト</h4>
+                            <li class="custom-ul-set">Webアプリケーション作成 [2020/10 - 2021/02]</li>
+                            <li class="custom-ul-set">ICPC(競技プログラミング勉強会) [2020/11 - ??]</li>
+                            <li class="custom-ul-set">漫才ロボ [2021/04 - ??]</li>
+                            <li class="custom-ul-set">DeepLearning勉強会 [2021/05 - 2021/09]</li>
+                            <br>
+                            <h4 class="left-align">Classwork</h4>
+                            <li class="custom-ul-set">モグラたたき作成 [2020/07]</li>
+                            <li class="custom-ul-set">サーバー/ネットワーク/Webサイト構築 [2021/09 - 2021/12]</li>
+                        </ul>
+                    </div>
+
+                    <div class="custom-ul-set main-content-block">
+                        <h3 class="left-align">Private</h3>
+                        <ul class="custom-ul-set">
+                            <h4 class="left-align">Language</h4>
+                            <li class="custom-ul-set">
+                                <a href="https://github.com/Yuto02D2-E2/HelloWorld" target="_blank">
+                                    <img src="./images/github-logo.svg" alt="github-logo">
+                                    HelloWorld repo [2021/06]
+                                </a>
                             </li>
-                            <li>
-                                Editor : Vim
+                            <br>
+                            <h4 class="left-align">Product</h4>
+                            <li class="custom-ul-set">
+                                <a href="https://yuto02d2-e2.github.io/DigitalClock" target="_blank">
+                                    Digital Clock [2021/09]
+                                </a>
                             </li>
-                            <li>
-                                Shell : Bash
+                            <li class="custom-ul-set">
+                                <a href="https://yuto02d2-e2.github.io/PDFtools" target="_blank">
+                                    PDF tools [2022/01]
+                                </a>
+                            </li>
+                            <li class="custom-ul-set">
+                                <a href="https://github.com/Yuto02D2-E2/ChromeExtension" target="_blank">
+                                    <img src="./images/github-logo.svg" alt="github-logo">
+                                    Chrome Extension for MyKONAN [2022/02 - ??]
+                                </a>
+                            </li>
+                            <li class="custom-ul-set">
+                                <a href="https://github.com/Yuto02D2-E2/Yuto02D2-E2.github.io" target="_blank">
+                                    <img src="./images/github-logo.svg" alt="github-logo">
+                                    This site [2022/02 - ??]
+                                </a>
                             </li>
                         </ul>
                     </div>
-                    <br><br>
-                </div>
-                <br>
+                </section>
             </div>
 
-
-            <!-- プロダクト紹介(載せるほどのプロダクト無いけど) -->
-            <div class="products">
-                <div class="shadow-lg p-3 mb-5 bg-white rounded">
-                    <h2 id="products" class="under-line"><img src="./image/grid.svg" alt="grid"> Products</h2>
-                    <br><br>
-                    <div class="private-project">
-                        <h3>Private Project</h3>
-                        <!-- 以下bootstrapのaccordionコンポーネント使用 -->
-                        <div class="accordion accordion-flush" id="private-project">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="flush-headingOne">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#private-1" aria-expanded="false" aria-controls="private-1">
-                                        1. もぐらたたき (GUI/Desktop App)
-                                    </button>
-                                </h2>
-                                <div id="private-1" class="accordion-collapse collapse"
-                                    aria-labelledby="flush-headingOne" data-bs-parent="#private-project">
-                                    <div class="accordion-body">
-                                        大学1年の前期に，授業の最終課題で作った作品．<br>
-                                        当時は必死に作ってたけど，改めて見るとごみ．<br>
-                                        人生で初めてのプログラミングだったから，思い入れはある <br>
-                                        <br>
-                                        言語：Processing <br>
-                                        技術：無し <br>
-                                        作成期間： 2020/07<br>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="flush-headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#private-2" aria-expanded="false" aria-controls="private-2">
-                                        2. Task-List (WebApp)
-                                    </button>
-                                </h2>
-                                <div id="private-2" class="accordion-collapse collapse"
-                                    aria-labelledby="flush-headingTwo" data-bs-parent="#private-project">
-                                    <div class="accordion-body">
-                                        課題と期限をリスト表示する．大学のスーパーIT人材育成プロジェクトという活動で作ったWebアプリ．<br>
-                                        このプロジェクトに参加する前は授業で習ったProcessingが少し書ける程度で，PythonもデータベースもHTML/CSSもGitも何もかも初めてだった．<br>
-                                        そもそも設計の仕方とかググり方すら分からなかったから，大変だったけど沢山のことを学べた <br>
-                                        <br>
-                                        言語：Python(Flask FrameWork), SQLite(DataBase), HTML / CSS <br>
-                                        技術：スクレイピング，暗号化，Git <br>
-                                        作成期間： 2020/10 - 2021/02<br>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="flush-headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#private-3" aria-expanded="false" aria-controls="private-3">
-                                        3. Digital Clock (WebApp)
-                                    </button>
-                                </h2>
-                                <div id="private-3" class="accordion-collapse collapse"
-                                    aria-labelledby="flush-headingThree" data-bs-parent="#private-project">
-                                    <div class="accordion-body">
-                                        <p>
-                                            この作品は<a href="https://yuto02d2-e2.github.io/DigitalClock/">ここから</a>見れます
-                                        </p>
-                                        HTML/CSS/JavaScriptの練習で作ったもの．<br>
-                                        Bootstrap等の便利なライブラリを一切使わずに車輪の再開発をした．<br>
-                                        かなりいろんなことを学べたので満足 <br>
-                                        <br>
-                                        言語：HTML, CSS, JavaScript <br>
-                                        技術：Github Pages, Google Analytics <br>
-                                        作成期間： 2021/09/23 - 2021/09/24<br>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br><br>
-
-                    <div class="collaboration-development">
-                        <h3>Collaboration Development</h3>
-                        <div class="accordion accordion-flush" id="collabo-dev">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="flush-headingOne">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collabo-1" aria-expanded="false" aria-controls="collabo-1">
-                                        1. TripNavi (WebApp)
-                                    </button>
-                                </h2>
-                                <div id="collabo-1" class="accordion-collapse collapse"
-                                    aria-labelledby="flush-headingOne" data-bs-parent="#collabo-dev">
-                                    <div class="accordion-body">
-                                        大学の友達
-                                        <a href="https://github.com/konnyakuken">Konken</a>,
-                                        <a href="https://github.com/Haru39M">Haru39M</a>,
-                                        <a href="https://github.com/mittan1330">mit1330</a>
-                                        との共同開発．<br>
-                                        主催者はKonken．私は主にバックエンドを担当する予定．<br>
-                                        <br>
-                                        言語：Python <br>
-                                        技術：？？ <br>
-                                        作成期間： 2021/?? - <br>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="flush-headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collabo-2" aria-expanded="false" aria-controls="collabo-2">
-                                        2. 漫才ロボ
-                                    </button>
-                                </h2>
-                                <div id="collabo-2" class="accordion-collapse collapse"
-                                    aria-labelledby="flush-headingTwo" data-bs-parent="#collabo-dev">
-                                    <div class="accordion-body">
-                                        甲南大学プレミアプロジェクトの一つ．<br>
-                                        私はソフトウェア班で，主に漫才の内容の生成に携わっている <br>
-                                        <br>
-                                        言語：Python <br>
-                                        技術：形態素解析とか <br>
-                                        作成期間： 2021/04 - ??<br>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br><br>
-                </div>
-                <br>
-            </div>
-
-
-            <!-- 使ってきたプログラミング言語の紹介 -->
-            <div class="programming-languages">
-                <div class="shadow-lg p-3 mb-5 bg-white rounded">
-                    <h2 id="programming-languages" class="under-line">
-                        <img src="./image/terminal.svg" alt="terminal"> Programming Languages (I have ever used)
-                    </h2>
-                    <br><br><br>
-
-                    <!-- 以下bootstrapのcardコンポーネント使用 -->
-                    <div class="row row-cols-2 row-cols-md-4 g-4">
-                        <div class="col">
-                            <div class="card border-primary">
-                                <img src="./image/python-official.png" alt="Python" class="card-img-top">
-                                <div class="card-body text-primary">
-                                    <h5 class="card-title"><a href="https://www.python.org/">Python</a></h5>
-                                    <p class="card-text">
-                                        <span class="badge rounded-pill bg-light text-dark">一番書きやすい</span>
-                                        <span class="badge rounded-pill bg-light text-dark">好き</span>
-                                        <span class="badge rounded-pill bg-light text-dark">競プロ</span>
-                                        <span class="badge rounded-pill bg-light text-dark">Webアプリ</span>
-                                        <span class="badge rounded-pill bg-light text-dark">DeepLearning</span>
-                                        <span class="badge rounded-pill bg-light text-dark">大学/講義</span>
-                                        <span class="badge rounded-pill bg-light text-dark">大学/superIT</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card border-primary">
-                                <img src="./image/C-Lang.jpg" alt="C" class="card-img-top">
-                                <div class="card-body text-primary">
-                                    <h5 class="card-title">C Language</h5>
-                                    <p class="card-text">
-                                        <span class="badge rounded-pill bg-light text-dark">好き</span>
-                                        <span class="badge rounded-pill bg-light text-dark">Algorithm</span>
-                                        <span class="badge rounded-pill bg-light text-dark">DataStructure</span>
-                                        <span class="badge rounded-pill bg-light text-dark">大学/講義</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card border-primary">
-                                <img src="./image/Cpp-Lang.jpg" alt="C++" class="card-img-top">
-                                <div class="card-body text-primary">
-                                    <h5 class="card-title">C++ Language</h5>
-                                    <p class="card-text">
-                                        <span class="badge rounded-pill bg-light text-dark">競プロ</span>
-                                        <span class="badge rounded-pill bg-light text-dark">勉強中</span>
-                                        <span class="badge rounded-pill bg-light text-dark">大学/superIT</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card border-primary">
-                                <img src="./image/Rust.png" alt="Rust" class="card-img-top">
-                                <div class="card-body text-primary">
-                                    <h5 class="card-title"><a href="https://www.rust-lang.org/ja/">Rust</a></h5>
-                                    <p class="card-text">
-                                        <span class="badge rounded-pill bg-light text-dark">好き</span>
-                                        <span class="badge rounded-pill bg-light text-dark">勉強中</span>
-                                        <span class="badge rounded-pill bg-light text-dark">難しい</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card border-primary">
-                                <img src="./image/Go.png" alt="Go" class="card-img-top">
-                                <div class="card-body text-primary">
-                                    <h5 class="card-title"><a href="https://golang.org/">Go Lang</a></h5>
-                                    <p class="card-text">
-                                        <span class="badge rounded-pill bg-light text-dark">勉強中</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card border-primary">
-                                <img src="./image/Javascript.jpg" alt="JavaScript" class="card-img-top">
-                                <div class="card-body text-primary">
-                                    <h5 class="card-title"><a
-                                            href="https://developer.mozilla.org/ja/docs/Web/JavaScript">JavaScript</a>
-                                    </h5>
-                                    <p class="card-text">
-                                        <span class="badge rounded-pill bg-light text-dark">勉強中</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card border-primary">
-                                <img src="./image/Processing.png" alt="Processing" class="card-img-top">
-                                <div class="card-body text-primary">
-                                    <h5 class="card-title"><a href="https://processing.org/">Processing</a></h5>
-                                    <p class="card-text">
-                                        <span class="badge rounded-pill bg-light text-dark">大学/講義</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card border-primary">
-                                <img src="./image/Java.jpg" alt="Java" class="card-img-top">
-                                <div class="card-body text-primary">
-                                    <h5 class="card-title"><a href="https://www.java.com/ja/">Java</a></h5>
-                                    <p class="card-text">
-                                        <span class="badge rounded-pill bg-light text-dark">勉強中</span>
-                                        <span class="badge rounded-pill bg-light text-dark">大学/講義</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br><br>
-                    <font size="3">
-                        プログラミング言語ではないけど，HTML/CSSとShellScriptもある程度は書けるよ
-                    </font>
-                    <br><br><br>
-                </div>
-                <br>
-            </div>
-
-
-            <!-- その他(このページの説明など)  -->
-            <div class="other">
-                <div class="shadow-lg p-3 mb-5 bg-white rounded">
-                    <h2 id="other" class="under-line"><img src="./image/info-circle.svg" alt="info"> other</h2>
-                    <br><br>
-                    <h3> about this site</h3>
-                    <p>
-                        This site is hosted by github pages. <br>
-                        The language used is html and css. Also, using a css library called Bootstrap. <br>
-                    </p>
-                    <br>
-                    <h3 class="highlight"> points of attention </h3>
-                    <div class="ul-align-center">
-                        <ul class="poa">
-                            <!-- TODO: 文字の強調を強くする(スマホとかでフォントによってはあまり差がついてない) -->
-                            <li>
-                                <font size="5">Simple</font> file configuration with only index.html and style.css
-                            </li>
-                            <li>
-                                <font size="5">Responsive</font> support for PC, SmartPhone, and so on
-                            </li>
-                            <li>
-                                Simple and <font size="5">beautiful</font> look with minimal bootstrap
-                            </li>
-                            <li>
-                                Secret elements such as <font size="5">EasterEgg</font>
-                            </li>
-                        </ul>
-                    </div>
-                    <br>
-                    ここまで見た人お疲れさまでした．
-                    <a href="https://yuto02d2-e2.github.io/raw.html">
-                        気分転換にどうぞ
-                    </a>
-                    <br>
-                    <!-- EasterEggその2 何もない所をクリックでモーダルが出現 -->
-                    <button type="button" class="btn btn-lg" data-bs-toggle="modal" data-bs-target="#EasterEgg">
-                        <pre>
-                        </pre>
-                    </button>
-                    <br>
-                </div>
+            <div class="main-content-board">
+                <h3>
+                    <a href="#">page top</a>
+                </h3>
                 <img src="https://4.bp.blogspot.com/-aJjlevJyK9U/XGjx40QThrI/AAAAAAABRco/j9aRPnYHpX4PU6RZjhTWRh6_8xnPfbNEQCLcBGAs/s800/animal_chara_computer_azarashi.png"
-                    alt="いらすとや" class="img-fluid">
-                <br><a href="#">page top</a><br><br>
+                    id="easter-egg" alt="いらすとや">
             </div>
-        </div>
-        <!-- ###################################### 本体(div class = main)ここまで ##################################### -->
+        </main>
 
 
-
-        <!-- ######################################## フッターここから ############################################# -->
         <footer>
-            <br>
-            <!-- copyrightよく分かってないけど，一応記載しとく -->
-            <p class="copyright">Yuto02D2 &copy; 2021 All rights reserved.</p>
-            <br>
+            <p class=" copyright">Yuto02D2 &copy; 2022 All rights reserved.</p>
         </footer>
-        <!-- ###################################### フッター終わり #################################### -->
 
 
-
-        <!-- 以下bootstrapのテンプレート．/bodyの直前に置く -->
-        <!-- Optional JavaScript; choose one of the two! -->
-        <!-- Option 1: Bootstrap Bundle with Popper -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-            crossorigin="anonymous"></script> -->
-        <!-- Option 2: Separate Popper and Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
-            integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
-            integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
-            crossorigin="anonymous"></script>
+        <script src="./script.js"></script>
     </body>
 
 </html>

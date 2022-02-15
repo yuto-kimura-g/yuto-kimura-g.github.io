@@ -1,0 +1,27 @@
+/* 2022/02/15@Yuto02D2 */
+
+@charset "UTF-8";
+
+/* @media screen and (min-width: 512px) { */
+@media screen and (min-width: 960px) {
+    body {
+        font-size: 20px;
+    }
+
+    header {
+        font-size: 22px;
+    }
+    img#header-logo {
+        width: 40vh;
+    }
+    li.header-content-li {
+        display: inline;
+    }
+    li.header-content-li + li.header-content-li::before {
+        content: "/";
+        padding: 20px;
+    }
+    ul.header-content-ul {
+        padding: 20px 0;
+    }
+}
