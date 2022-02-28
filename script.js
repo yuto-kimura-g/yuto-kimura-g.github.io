@@ -45,5 +45,9 @@ document.getElementById("toggle-experience").addEventListener("click", () => {
 
 
 document.getElementById("easter-egg").addEventListener("click", () => {
-    window.open("https://www.google.com/search?q=pacman");
+    if (navigator.userAgent.match(/Android|iPhone.+Mobile/)) {
+        window.open("https://www.google.com/search?q=word coach");
+    } else {
+        window.open("https://www.google.com/search?q=pacman");
+    }
 });
