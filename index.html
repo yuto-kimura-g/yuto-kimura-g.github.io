@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <!-- 2022/02/15@Yuto02D2 -->
 
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>HomePage</title>
-        <link rel="shortcut icon" href="./images/favicon.png">
-
-        <link rel="stylesheet" href="./style.css">
-        <link rel="stylesheet" href="./style.pc.css">
-        <link rel="stylesheet" href="./style.smartphone.css">
+        <title>yuto's home page</title>
+        <link rel="shortcut icon" href="./images/favicon.ico">
+        <link rel="stylesheet" href="./css/style.css">
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-DYPG3M2HNG"></script>
@@ -21,174 +17,41 @@
             gtag('js', new Date());
             gtag('config', 'G-DYPG3M2HNG');
         </script>
-
-        <!-- site map -->
-        <meta name="google-site-verification" content="OX7lHckWf0GsC9AE4XOnIOHvhhnToanX58DFT5ZSSC0" />
     </head>
 
     <body>
         <header>
-            <figure class="container">
-                <img id="header-logo" src="./images/header-logo.png" alt="logo">
-                <figcaption>Yuto02D2</figcaption>
-            </figure>
+            <img src="./images/logo.png" alt="logo" class="header">
+            <span class="header">yuto's home page</span>
+        </header>
 
-            <div class="container custom-ul-set">
-                <ul class="header-content-ul">
-                    <li class="header-content-li">
-                        <a href="#toggle-profile">
-                            <img class="header-content-logo" src="./images/profile-logo.svg" alt="profile logo">
-                            Profile
+        <main>
+            <div class="container" id="typewriter">
+                <!-- <p>welcome here :)</p> -->
+            </div>
+            <div class="container">
+                <ul>
+                    <li>
+                        <a href="https://yuto02d2-e2.github.io/blog/">
+                            <img src="./images/blog.svg" alt="blog">
+                            Blog site
                         </a>
                     </li>
-                    <li class="header-content-li">
-                        <a href="#toggle-develop-environment">
-                            <img class="header-content-logo" src="./images/develop-environment-logo.svg"
-                                alt="develop-environment logo">
-                            Develop Environment
-                        </a>
-                    </li>
-                    <li class="header-content-li">
-                        <a href="#toggle-experience">
-                            <img class="header-content-logo" src="./images/experience-logo.svg" alt="experience logo">
-                            Experience
+                    <li>
+                        <a href="https://github.com/Yuto02D2-E2/">
+                            <img src="./images/github.svg" alt="github">
+                            GitHub Profile
                         </a>
                     </li>
                 </ul>
             </div>
-        </header>
-
-
-        <main class="container">
-            <!-- TODO: Profile -->
-            <div id="toggle-profile" class="main-content-board">
-                <h2>
-                    <img src="./images/profile-logo.svg" alt="profile logo">
-                    Profile
-                </h2>
-                <section id="profile-section">
-                    <div class="custom-ul-set main-content-block">
-                        <ul class="custom-ul-set">
-                            <li class="custom-ul-set">知能情報学部 知能情報学科 ２年</li>
-                            <li class="custom-ul-set">
-                                <a href="https://github.com/yuto02d2-e2/" target="_blank">
-                                    GitHubアカウント
-                                    <img src="./images/github-logo.svg" alt="github-logo">
-                                    (Yuto02D2-E2)
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-            </div>
-
-            <!-- TODO: Develop Environment -->
-            <div id="toggle-develop-environment" class="main-content-board">
-                <h2>
-                    <img src="./images/develop-environment-logo.svg" alt="develop-environment logo">
-                    Develop Environment
-                </h2>
-                <section id="develop-environment-section">
-                    <div class="custom-ul-set main-content-block">
-                        <ul class="custom-ul-set">
-                            <h4 class="left-align">OS</h4>
-                            <li class="custom-ul-set">Windows10 Pro (main)</li>
-                            <li class="custom-ul-set">Ubuntu Desktop 20.04LTS (sub)</li>
-                            <br>
-                            <h4 class="left-align">Editor</h4>
-                            <li class="custom-ul-set">Visual Studio Code</li>
-                            <li class="custom-ul-set">Vim</li>
-                        </ul>
-                    </div>
-                    <div class="main-content-block">
-                        <a href="https://github.com/Yuto02D2-E2/SettingFiles" target="_blank">
-                            <img src="./images/github-logo.svg" alt="github-logo">
-                            dotfiles(整備中)
-                        </a>
-                        <br>
-                        ワンライナーで環境構築を出来るようにしたくて，<br>
-                        無限に時間を溶かしている
-                    </div>
-                </section>
-            </div>
-
-            <!-- TODO: Experience -->
-            <div id="toggle-experience" class="main-content-board">
-                <h2>
-                    <img src="./images/experience-logo.svg" alt="experience logo">
-                    Experience
-                </h2>
-                <section id="experience-section">
-                    <div class="custom-ul-set main-content-block">
-                        <h3 class="left-align">University</h3>
-                        <ul class="custom-ul-set">
-                            <h4 class="left-align">スーパーITプロジェクト</h4>
-                            <li class="custom-ul-set">Webアプリケーション作成 [2020/10 - 2021/02]</li>
-                            <li class="custom-ul-set">ICPC(競技プログラミング勉強会) [2020/11 - ??]</li>
-                            <li class="custom-ul-set">漫才ロボ [2021/04 - ??]</li>
-                            <li class="custom-ul-set">DeepLearning勉強会 [2021/05 - 2021/09]</li>
-                            <br>
-                            <h4 class="left-align">Classwork</h4>
-                            <li class="custom-ul-set">モグラたたき作成 [2020/07]</li>
-                            <li class="custom-ul-set">サーバー/ネットワーク/Webサイト構築 [2021/09 - 2021/12]</li>
-                        </ul>
-                    </div>
-
-                    <div class="custom-ul-set main-content-block">
-                        <h3 class="left-align">Private</h3>
-                        <ul class="custom-ul-set">
-                            <h4 class="left-align">Language</h4>
-                            <li class="custom-ul-set">
-                                <a href="https://github.com/Yuto02D2-E2/HelloWorld" target="_blank">
-                                    <img src="./images/github-logo.svg" alt="github-logo">
-                                    HelloWorld repo [2021/06]
-                                </a>
-                            </li>
-                            <br>
-                            <h4 class="left-align">Product</h4>
-                            <li class="custom-ul-set">
-                                <a href="https://yuto02d2-e2.github.io/DigitalClock" target="_blank">
-                                    Digital Clock [2021/09]
-                                </a>
-                            </li>
-                            <li class="custom-ul-set">
-                                <a href="https://yuto02d2-e2.github.io/PDFtools" target="_blank">
-                                    PDF tools [2022/01]
-                                </a>
-                            </li>
-                            <li class="custom-ul-set">
-                                <a href="https://github.com/Yuto02D2-E2/ChromeExtension" target="_blank">
-                                    <img src="./images/github-logo.svg" alt="github-logo">
-                                    Chrome Extension for MyKONAN [2022/02 - ??]
-                                </a>
-                            </li>
-                            <li class="custom-ul-set">
-                                <a href="https://github.com/Yuto02D2-E2/Yuto02D2-E2.github.io" target="_blank">
-                                    <img src="./images/github-logo.svg" alt="github-logo">
-                                    This site [2022/02 - ??]
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-            </div>
-
-            <div class="main-content-board">
-                <h3>
-                    <a href="#">page top</a>
-                </h3>
-                <img src="https://4.bp.blogspot.com/-aJjlevJyK9U/XGjx40QThrI/AAAAAAABRco/j9aRPnYHpX4PU6RZjhTWRh6_8xnPfbNEQCLcBGAs/s800/animal_chara_computer_azarashi.png"
-                    id="easter-egg" alt="いらすとや">
-            </div>
         </main>
 
-
         <footer>
-            <p class=" copyright">Yuto02D2 &copy; 2022 All rights reserved.</p>
+            <p class="copyright">Yuto02D2 &copy; 2022 All rights reserved.</p>
         </footer>
 
-
-        <script src="./script.js"></script>
+        <script src="./js/script.js"></script>
     </body>
 
 </html>

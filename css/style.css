@@ -1,0 +1,125 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Klee+One:wght@600&display=swap');
+
+:root {
+    --theme-color: rgba(176, 196, 222, 0.25);
+}
+
+* {
+    /*
+    margin:要素外の余白
+    padding:要素内の余白
+    引数は
+    ・<上下> <左右>
+    */
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    /* フォント */
+    font-family: 'Source Code Pro', 'Klee One', monospace;
+    /* ref: https://developer.mozilla.org/ja/docs/Web/CSS/font-size */
+    font-size: 62.5%;
+    /* 背景画像 */
+    background-image: url(/images/background.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* 配置 */
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    display: inline-block;
+    text-align: left;
+    list-style-position: inside;
+}
+
+li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+header {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 100%;
+    text-align: left;
+    background-color: var(--theme-color);
+    display: flex;
+    font-size: 1.2rem;
+}
+
+header .header {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    align-self: center;
+}
+
+header img {
+    border-radius: 50%;
+    height: 7.5vh;
+}
+
+main {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+main div.container {
+    padding: 20px 50px;
+    margin: 20px;
+    border-radius: 5%;
+    background-color: var(--theme-color);
+}
+
+#typewriter::after {
+    content: "|";
+    animation-name: blink;
+    animation-duration: 0.75s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+footer {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 100%;
+    padding: 15px 0;
+    background-color: var(--theme-color);
+    font-size: 1.0rem;
+}
+
+footer p.copyright {
+    margin: 0 10px;
+}
