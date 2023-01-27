@@ -7,8 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>yuto's home page</title>
         <link rel="shortcut icon" href="./images/favicon.ico">
-        <link rel="stylesheet" href="./css/style.css">
-
+        <link rel="stylesheet" href="./style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-DYPG3M2HNG"></script>
         <script>
@@ -26,10 +26,15 @@
         </header>
 
         <main>
-            <div class="container" id="typewriter">
-                <!-- <p>welcome here :)</p> -->
+            <div class="container">
+                <h2>console</h2>
+                <button id="run">click here</button>
+                <br>
+                <span>('v')/</span>
+                <span id="typewriter"></span>
             </div>
             <div class="container">
+                <h2>link</h2>
                 <ul>
                     <li>
                         <a href="https://yuto02d2-e2.github.io/blog/">
@@ -51,7 +56,10 @@
             <p class="copyright">Yuto02D2 &copy; All rights reserved.</p>
         </footer>
 
-        <script src="./js/script.js"></script>
+        <canvas class="background">
+            <!-- particles.js -->
+        </canvas>
+        <script src="./script.js"></script>
     </body>
 
 </html>
