@@ -2,8 +2,11 @@
 // ref: https://github.com/marcbruederlin/particles.js
 Particles.init({
     selector: ".background",
-    maxParticles: 150,
-    sizeVariations: 10,
+    // pc,tablet: (100, 50)
+    // smapho: (50, 50)
+    maxParticles: 100,
+    // maxParticles: 50,
+    sizeVariations: 50,
     color: ['#00bbdd', '#404B69', '#DBEDF3'],
     connectParticles: true
 });
@@ -18,6 +21,7 @@ const messages = [
     "have a nice day",
     "see also link below",
     "thanks for your visit",
+    // TODO: messagesをAIのAPIとか使って自動生成する？
 ];
 
 const typewriter = (args) => {

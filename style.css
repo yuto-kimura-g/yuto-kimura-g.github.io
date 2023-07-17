@@ -1,14 +1,12 @@
 @charset "UTF-8";
-/* @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Klee+One:wght@600&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Source+Code+Pro&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Sans:ital,wght@0,400;0,600;0,900;1,400;1,600;1,900&family=Source+Code+Pro&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Noto+Sans+JP&family=Noto+Sans:ital,wght@0,400;0,600;0,900;1,400;1,600;1,900&family=Poppins:wght@600;800;900&family=Source+Code+Pro&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Noto+Sans+JP&family=Noto+Sans:ital,wght@0,400;0,600;0,900;1,400;1,600;1,900&family=Poppins:wght@600;800;900&family=Source+Code+Pro&family=Ubuntu:ital,wght@0,400;0,700;1,400&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Noto+Sans+JP&family=Noto+Sans:ital,wght@0,400;0,600;0,900;1,400;1,600;1,900&family=Poppins:wght@600;800;900&family=Source+Code+Pro&family=Ubuntu:ital,wght@0,400;0,700;1,400&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Noto+Sans+JP&family=Noto+Sans:ital,wght@0,400;0,600;0,900;1,400;1,600;1,900&family=Poppins:wght@600;800;900&family=Source+Code+Pro:ital,wght@0,400;1,900&family=Ubuntu:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
-  --theme-color: rgba(176, 196, 222, 0.25);
-  --theme-color-active: rgba(176, 196, 222, 0.85);
+  /* --theme-color: rgba(176, 196, 222, 0.25); */
+  /* --theme-color-active: rgba(176, 196, 222, 0.85); */
+  --theme-color: rgb(250, 250, 250, 0.8);
+  --theme-color-active: rgb(250, 250, 250, 1);
 }
 
 * {
@@ -24,19 +22,11 @@
 }
 
 body {
-  /* フォント */
-  /* font-family: 'Klee One', monospace; */
-  /* font-family: 'Source Code Pro', 'Klee One', monospace; */
-  /* font-family: 'Noto Sans', sans-serif; */
-  /* font-family: 'Noto Sans JP', sans-serif; */
-  /* font-family: 'Source Code Pro', monospace; */
-  /* font-family: 'Dancing Script', cursive; */
   font-family: 'Ubuntu', sans-serif;
 
   /* ref: https://developer.mozilla.org/ja/docs/Web/CSS/font-size */
   font-size: 62.5%;
 
-  /* 配置 */
   align-items: center;
   text-align: center;
   min-height: 100vh;
@@ -44,10 +34,10 @@ body {
   flex-direction: column;
 }
 
-h2 {
+/* h2 {
   font-family: 'Noto Sans', sans-serif;
   font-weight: 600;
-}
+} */
 
 a {
   color: black;
@@ -76,19 +66,15 @@ li {
 header {
   flex-grow: 0;
   flex-shrink: 0;
-  width: 100%;
+  width: 100vw;
   text-align: left;
   background-color: var(--theme-color);
   display: flex;
-  /* font-family: 'Dancing Script', cursive; */
-  /* font-family: 'Poppins', sans-serif; */
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 600;
 }
 
-header:active,
-header:hover,
-header:focus {
+header:hover {
   background-color: var(--theme-color-active);
 }
 
@@ -101,7 +87,8 @@ header .header {
 
 header img {
   border-radius: 50%;
-  height: 7.5vh;
+  height: 10vh;
+  padding: 10px;
 }
 
 main {
@@ -117,29 +104,26 @@ main {
 div.container {
   padding: 20px 50px;
   margin: 20px;
-  border-radius: 5%;
-  background-color: var(--theme-color);
-}
-
-div.container:hover {
+  border-radius: 30px;
   background-color: var(--theme-color-active);
 }
 
 button {
   font-size: 1.5rem;
-  border-radius: 10%;
+  border-radius: 15px;
   border-style: dashed;
   margin: 10px 0;
   padding: 5px 10px;
 }
 
 button:hover {
-  border-style: solid;
-  border-width: 10px;
+  font-size: 2rem;
 }
 
 #typewriter::after {
   content: "|";
+  color: lime;
+  font-weight: 900;
   animation-name: blink;
   animation-duration: 0.75s;
   animation-iteration-count: infinite;
