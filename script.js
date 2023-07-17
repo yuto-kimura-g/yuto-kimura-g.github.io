@@ -2,12 +2,11 @@
 // ref: https://github.com/marcbruederlin/particles.js
 Particles.init({
     selector: ".background",
-    maxParticles: 150,
-    sizeVariations: 10,
+    maxParticles: (navigator.userAgent.match(/iPhone|Android.+Mobile/)) ? 50 : 100,
+    sizeVariations: 50,
     color: ['#00bbdd', '#404B69', '#DBEDF3'],
     connectParticles: true
 });
-
 
 // タイプライター
 const typeSpeed = 100;
