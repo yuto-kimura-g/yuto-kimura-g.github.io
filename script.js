@@ -2,15 +2,11 @@
 // ref: https://github.com/marcbruederlin/particles.js
 Particles.init({
     selector: ".background",
-    // pc,tablet: (100, 50)
-    // smapho: (50, 50)
-    maxParticles: 100,
-    // maxParticles: 50,
+    maxParticles: (navigator.userAgent.match(/iPhone|Android.+Mobile/)) ? 50 : 100,
     sizeVariations: 50,
     color: ['#00bbdd', '#404B69', '#DBEDF3'],
     connectParticles: true
 });
-
 
 // タイプライター
 const typeSpeed = 100;
@@ -21,7 +17,6 @@ const messages = [
     "have a nice day",
     "see also link below",
     "thanks for your visit",
-    // TODO: messagesをAIのAPIとか使って自動生成する？
 ];
 
 const typewriter = (args) => {

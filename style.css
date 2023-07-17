@@ -1,10 +1,7 @@
 @charset "UTF-8";
-/* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Noto+Sans+JP&family=Noto+Sans:ital,wght@0,400;0,600;0,900;1,400;1,600;1,900&family=Poppins:wght@600;800;900&family=Source+Code+Pro&family=Ubuntu:ital,wght@0,400;0,700;1,400&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Noto+Sans+JP&family=Noto+Sans:ital,wght@0,400;0,600;0,900;1,400;1,600;1,900&family=Poppins:wght@600;800;900&family=Source+Code+Pro:ital,wght@0,400;1,900&family=Ubuntu:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Poppins:wght@600;800;900&family=Source+Code+Pro:ital,wght@0,400;1,900&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
-  /* --theme-color: rgba(176, 196, 222, 0.25); */
-  /* --theme-color-active: rgba(176, 196, 222, 0.85); */
   --theme-color: rgb(250, 250, 250, 0.8);
   --theme-color-active: rgb(250, 250, 250, 1);
 }
@@ -33,11 +30,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-
-/* h2 {
-  font-family: 'Noto Sans', sans-serif;
-  font-weight: 600;
-} */
 
 a {
   color: black;
@@ -71,24 +63,24 @@ header {
   background-color: var(--theme-color);
   display: flex;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 header:hover {
   background-color: var(--theme-color-active);
 }
 
-header .header {
+header .header-item {
   margin-top: 5px;
   margin-bottom: 5px;
-  margin-left: 20px;
+  margin-left: 30px;
   align-self: center;
 }
 
 header img {
   border-radius: 50%;
   height: 10vh;
-  padding: 10px;
+  padding: 10px 0;
 }
 
 main {
@@ -155,4 +147,12 @@ canvas {
   top: 0;
   left: 0;
   z-index: -1;
+}
+
+
+/* レスポンシブ */
+@media screen and (max-width: 480px) {
+  header {
+    font-size: 1.5rem;
+  }
 }
