@@ -13,11 +13,25 @@
     <meta property="og:description" content="yuto no homepage dayo :)" />
     <meta property="og:url" content="https://yuto-kimura-g.github.io/">
 
-    <title>yuto's home page</title>
+    <title>welcome</title>
     <link rel="shortcut icon" href="./images/favicon.ico">
-    <link rel="stylesheet" href="./style.css">
-    <!-- particles.js | 背景のアニメーション -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+    <style>
+      body {
+        display: flex;
+        height: 100vh;
+        width: 80vw;
+        margin: 0 auto;
+        align-items: center;
+        font-size: xx-large;
+        transition: opacity 3s 3s ease-out;
+      }
+
+      h1 {
+        width: 80vw;
+        text-align: center;
+      }
+
+    </style>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DTJMT2QH02"></script>
@@ -27,46 +41,19 @@
       gtag('js', new Date());
       gtag('config', 'G-DTJMT2QH02');
     </script>
-
   </head>
 
   <body>
-    <header>
-      <img src="./images/logo.png" alt="logo" class="header-item">
-      <span class="header-item">Yuto's Home Page</span>
-    </header>
+    <h1>Welcome here :)</h1>
 
-    <main>
-      <div class="container">
-        <h2>Console</h2>
-        <button id="run" class="code-font">click here</button>
-        <br>
-        <span class="code-font">('v')/</span>
-        <span id="typewriter" class="code-font"></span>
-      </div>
-      <div class="container">
-        <h2>Link</h2>
-        <ul>
-          <li>
-            <a href="https://github.com/yuto-kimura-g/">
-              <img src="./images/github.svg" alt="github">
-              <span>GitHub Profile</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://yuto-kimura-g.github.io/blog/">
-              <img src="./images/blog.svg" alt="blog">
-              <span>Blog site (not working...)</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </main>
-
-    <canvas class="background">
-      <!-- particles.js -->
-    </canvas>
-    <script src="./script.js"></script>
+    <script>
+      window.onload = () => {
+        document.querySelector("body").style.opacity = 0;
+        window.setTimeout(() => {
+          window.location.href = "./home/index.html";
+        }, 6250);  // [msec]
+      }
+    </script>
   </body>
 
 </html>
