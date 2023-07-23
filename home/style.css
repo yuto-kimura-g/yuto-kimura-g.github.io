@@ -29,6 +29,8 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  transition: opacity 0.75s ease-in-out;
+  opacity: 0;
 }
 
 a {

@@ -1,6 +1,9 @@
 "use strict;"
 
 window.onload = () => {
+    // フェードイン
+    document.querySelector("body").style.opacity = 1;
+
     // 背景 (particles.js)
     // ref: https://github.com/marcbruederlin/particles.js
     Particles.init({

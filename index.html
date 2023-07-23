@@ -16,14 +16,18 @@
     <title>welcome</title>
     <link rel="shortcut icon" href="./images/favicon.ico">
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Poppins:wght@600;800;900&family=Source+Code+Pro:ital,wght@0,400;1,900&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
       body {
         display: flex;
         height: 100vh;
         width: 80vw;
         margin: 0 auto;
         align-items: center;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 700;
         font-size: xx-large;
-        transition: opacity 3s 3s ease-out;
+        transition: opacity 3s 1.5s ease-in-out;
       }
 
       h1 {
@@ -51,7 +55,7 @@
         document.querySelector("body").style.opacity = 0;
         window.setTimeout(() => {
           window.location.href = "./home/index.html";
-        }, 6250);  // [msec]
+        }, 4550);  // [msec]
       }
     </script>
   </body>
