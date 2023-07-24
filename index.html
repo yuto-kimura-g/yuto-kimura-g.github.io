@@ -20,14 +20,17 @@
 
       body {
         display: flex;
-        height: 100vh;
-        width: 80vw;
-        margin: 0 auto;
         align-items: center;
-        font-family: 'Ubuntu', sans-serif;
-        font-weight: 700;
+        width: 80vw;
+        height: 100vh;
+        margin: 0 auto;
+        font-family: Ubuntu, sans-serif;
         font-size: xx-large;
-        transition: opacity 3s 1.5s ease-in-out;
+        font-weight: 700;
+        transition-property: opacity;
+        transition-duration: 3s;
+        transition-delay: 1.5s;
+        transition-timing-function: ease-in-out;
       }
 
       h1 {
@@ -55,7 +58,7 @@
         document.querySelector("body").style.opacity = 0;
         window.setTimeout(() => {
           window.location.href = "./home/index.html";
-        }, 4550);  // [msec]
+        }, 4500);  // [msec]
       }
     </script>
   </body>

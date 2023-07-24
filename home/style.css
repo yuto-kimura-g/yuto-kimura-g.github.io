@@ -1,36 +1,37 @@
 @charset "UTF-8";
+
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Poppins:wght@600;800;900&family=Source+Code+Pro:ital,wght@0,400;1,900&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
-  --theme-color: rgb(250, 250, 250, 0.8);
-  --theme-color-active: rgb(250, 250, 250, 1);
+  --theme-color: rgb(250 250 250 / 80%);
+  --theme-color-active: rgb(250 250 250 / 100%);
 }
 
 * {
   /*
-    margin:要素外の余白
-    padding:要素内の余白
-    引数は
-    ・<上下> <左右>
-    */
+  margin:要素外の余白
+  padding:要素内の余白
+  引数は
+  ・<上下> <左右>
+  */
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Ubuntu', sans-serif;
-
-  /* ref: https://developer.mozilla.org/ja/docs/Web/CSS/font-size */
-  font-size: 62.5%;
-
-  align-items: center;
-  text-align: center;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  transition: opacity 0.75s ease-in-out;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Ubuntu, sans-serif;
+  /* ref: https://developer.mozilla.org/ja/docs/Web/CSS/font-size */
+  font-size: 62.5%;
+  text-align: center;
   opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.75s;
+  transition-timing-function: ease-in-out;
 }
 
 a {
@@ -42,7 +43,7 @@ a:hover {
   text-decoration: underline;
 }
 
-a span {
+a>span {
   margin-left: 10px;
 }
 
@@ -52,79 +53,77 @@ ul {
   list-style-position: inside;
 }
 
-li {
-  list-style: none;
+ul>li {
   margin: 10px 0;
+  list-style: none;
 }
 
 header {
-  flex-grow: 0;
-  flex-shrink: 0;
-  width: 100vw;
-  text-align: left;
-  background-color: var(--theme-color);
   display: flex;
+  width: 100vw;
   font-size: 2rem;
   font-weight: 700;
+  text-align: left;
+  background-color: var(--theme-color);
 }
 
 header:hover {
   background-color: var(--theme-color-active);
 }
 
-header .header-item {
+.header-img {
+  height: 10vh;
+  padding: 10px 0;
+  border-radius: 50%;
+}
+
+.header-item {
+  align-self: center;
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 30px;
-  align-self: center;
-}
-
-header img {
-  border-radius: 50%;
-  height: 10vh;
-  padding: 10px 0;
 }
 
 main {
-  flex-grow: 1;
-  width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  flex-grow: 1;
   align-items: center;
+  justify-content: center;
+  width: 100vw;
   font-size: 1.5rem;
 }
 
-div.container {
+.container {
   padding: 20px 50px;
   margin: 20px;
-  border-radius: 30px;
   background-color: var(--theme-color-active);
+  border-radius: 5px;
 }
 
 button {
-  font-size: 1.5rem;
-  border-radius: 15px;
-  border-style: dashed;
-  margin: 10px 0;
   padding: 5px 10px;
+  margin: 10px 0;
+  font-size: 1.5rem;
+  border-style: dashed;
+  border-radius: 15px;
 }
 
 button:hover {
   font-size: 2rem;
 }
 
+.code-font {
+  font-family: 'Source Code Pro', monospace;
+}
+
 #typewriter::after {
-  content: "|";
-  color: lime;
   font-weight: 900;
+  color: lime;
+  content: "|";
   animation-name: blink;
   animation-duration: 0.75s;
   animation-iteration-count: infinite;
-}
-
-.code-font {
-  font-family: 'Source Code Pro', monospace;
 }
 
 @keyframes blink {
@@ -143,17 +142,17 @@ canvas {
 }
 
 .background {
-  width: 100%;
-  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
+  width: 100%;
+  height: 100%;
 }
 
 
 /* レスポンシブ */
-@media screen and (max-width: 480px) {
+@media screen and (width <=480px) {
   header {
     font-size: 1.5rem;
   }
