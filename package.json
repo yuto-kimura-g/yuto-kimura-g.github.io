@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "stylelint-config-recess-order": "^4.3.0",
+    "stylelint-config-standard": "^34.0.0"
+  },
+  "scripts": {
+    "lint:check:css": "stylelint *.css",
+    "lint:fix:css": "stylelint *.css --fix"
+  }
+}
