@@ -28,7 +28,7 @@ body {
   /* ref: https://developer.mozilla.org/ja/docs/Web/CSS/font-size */
   font-size: 62.5%;
   text-align: center;
-  opacity: 0;
+  opacity: 1%;
   transition-property: opacity;
   transition-duration: 0.75s;
   transition-timing-function: ease-in-out;
