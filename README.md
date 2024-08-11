@@ -1,3 +1,3 @@
-# home page
+# website
 
-<https://yuto-kimura-g.github.io/>
+<https://yuto-kimura-g.github.io>
