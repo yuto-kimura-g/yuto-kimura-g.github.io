@@ -43,9 +43,9 @@ a:hover {
   text-decoration: underline;
 }
 
-a>span {
+/* a>span {
   margin-left: 10px;
-}
+} */
 
 ul {
   display: inline-block;
@@ -97,8 +97,17 @@ main {
 .container {
   padding: 20px 50px;
   margin: 20px;
-  background-color: var(--theme-color-active);
+  background-color: var(--theme-color);
   border-radius: 5px;
+}
+
+.container:hover {
+  background-color: var(--theme-color-active);
+}
+
+h2 {
+  text-align: left;
+  margin: 20px 0;
 }
 
 button {

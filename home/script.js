@@ -14,30 +14,30 @@ window.onload = () => {
         connectParticles: true
     });
 
-    // タイプライター
-    const typeSpeed = 100;
-    const consoleElement = document.getElementById("typewriter");
-    const messages = [
-        "welcome here",
-        "take your time",
-        "have a nice day",
-        "see also link below",
-        "thanks for your visit",
-    ];
+    // // タイプライター
+    // const typeSpeed = 100;
+    // const consoleElement = document.getElementById("typewriter");
+    // const messages = [
+    //     "welcome here",
+    //     "take your time",
+    //     "have a nice day",
+    //     "see also link below",
+    //     "thanks for your visit",
+    // ];
 
-    const typewriter = (args) => {
-        consoleElement.textContent = "";
-        args.message.split("").forEach((char, index) => {
-            setTimeout(() => { // async
-                consoleElement.textContent += char;
-            }, typeSpeed * index);
-        });
-    };
+    // const typewriter = (args) => {
+    //     consoleElement.textContent = "";
+    //     args.message.split("").forEach((char, index) => {
+    //         setTimeout(() => { // async
+    //             consoleElement.textContent += char;
+    //         }, typeSpeed * index);
+    //     });
+    // };
 
-    document.getElementById("run").addEventListener("click", () => {
-        typewriter({
-            message: messages[Math.floor(Math.random() * messages.length)]
-        });
-    });
+    // document.getElementById("run").addEventListener("click", () => {
+    //     typewriter({
+    //         message: messages[Math.floor(Math.random() * messages.length)]
+    //     });
+    // });
 
 }
