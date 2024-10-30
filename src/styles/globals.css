@@ -1,0 +1,29 @@
+/*
+  Google Fonts からフォントを取得
+  パフォーマンスを考えるなら，フォントのファイルをassets/とかに置くべき？
+ */
+/* @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400..700;1,400..700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a:hover {
+  /* https://developer.mozilla.org/ja/docs/Web/CSS/text-shadow */
+  /* color | offset-x | offset-y | blur-radius */
+  text-shadow: lime 0 0 10px;
+}
+
+ul {
+  @apply list-outside list-disc ml-3 pl-5;
+}
+
+li {
+  @apply text-wrap break-words my-1;
+}
