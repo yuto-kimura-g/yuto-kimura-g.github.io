@@ -1,21 +1,16 @@
+import React from 'react';
+
 export default function ListItem({
   title,
-  description,
-  link,
+  body,
 }: {
   title: string;
-  description?: string;
-  link?: string;
+  body: React.ReactNode;
 }) {
   return (
     <li className="space-x-3">
-      <span className="font-semibold">{title}:</span>
-      {description && <span>{description}</span>}
-      {link && (
-        <a href={link} target="_blank">
-          {link}
-        </a>
-      )}
+      <span className="font-bold">{title}:</span>
+      {body}
     </li>
   );
 }
