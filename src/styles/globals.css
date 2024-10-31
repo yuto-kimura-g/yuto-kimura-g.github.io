@@ -21,9 +21,9 @@ a:hover {
 }
 
 ul {
-  @apply list-outside list-disc ml-3 pl-5;
+  @apply ml-3 list-outside list-disc pl-5;
 }
 
 li {
-  @apply text-wrap break-words my-1;
+  @apply my-1 text-wrap break-words;
 }
