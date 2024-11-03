@@ -51,7 +51,7 @@ const Background: React.FC = () => {
             mode: 'repulse',
           },
           resize: {
-            enable: true,
+            enable: false,
           },
         },
         modes: {
