@@ -1,6 +1,6 @@
 // ref: https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap
 
-import type { MetadataRoute } from 'next'
+import type { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -10,5 +10,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 1,
     },
-  ]
+  ];
 }
