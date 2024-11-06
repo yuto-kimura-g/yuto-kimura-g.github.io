@@ -4,6 +4,7 @@ import { Footer } from '@/components/Footer';
 import { Container } from '@/components/Container';
 import '@/styles/globals.css';
 import Background from '@/components/Background';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 export const metadata: Metadata = {
   title: 'yuto::website',
@@ -26,6 +27,7 @@ export default function RootLayout({
         <Container>{children}</Container>
         <Footer />
       </body>
+      <GoogleAnalytics gaId="G-DTJMT2QH02" />
     </html>
   );
 }
