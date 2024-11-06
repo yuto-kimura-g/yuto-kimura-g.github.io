@@ -7,7 +7,7 @@ import Background from '@/components/Background';
 import { GoogleAnalytics } from '@next/third-parties/google';
 
 export const metadata: Metadata = {
-  title: 'yuto::website',
+  title: 'yuto : : website',
   description: 'yuto no homepage dayo :)',
   icons: {
     icon: '/y.png',
@@ -27,6 +27,7 @@ export default function RootLayout({
         <Container>{children}</Container>
         <Footer />
       </body>
+      {/* ref: https://nextjs.org/docs/app/building-your-application/optimizing/third-party-libraries#google-analytics */}
       <GoogleAnalytics gaId="G-DTJMT2QH02" />
     </html>
   );

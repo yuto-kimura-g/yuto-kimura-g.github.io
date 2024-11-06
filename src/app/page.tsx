@@ -43,6 +43,12 @@ export default function IndexPage() {
             body={<HrefText link="https://github.com/yuto-kimura-g/" />}
           />
           <ListItem
+            title="Website"
+            body={
+              <HrefText link="https://github.com/yuto-kimura-g/yuto-kimura-g.github.io/" />
+            }
+          />
+          <ListItem
             title="Weblog"
             body={<HrefText link="https://md-weblog.pages.dev/" />}
           />
@@ -52,15 +58,6 @@ export default function IndexPage() {
               <HrefText link="https://yuto-kimura-g.github.io/ocean-view/" />
             }
           />
-          {/*
-          TODO:
-          <ListItem
-            title="Digital Clock"
-            body={
-              <HrefText link="https://yuto-kimura-g.github.io/digital-clock/" />
-            }
-          />
-          */}
         </ul>
       </div>
       {/* <Dummy /> */}
