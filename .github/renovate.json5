@@ -1,0 +1,51 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "schedule": [
+    // once a month on the first day of the month before 6 a.m.
+    "* 0-6 1 * *"
+  ],
+  "extends": [
+    "config:best-practices"
+  ],
+  "enabledManagers": [
+    "npm",
+    "github-actions"
+  ],
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "packageRules": [
+    {
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-minor-patch",
+      "matchPackageNames": [
+        "*"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "automerge": true,
+      "minimumReleaseAge": "2 weeks"
+    }
+  ],
+  "labels": [
+    "renovate"
+  ],
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "labels": [
+      "security"
+    ]
+  },
+  "assignees": [
+    "yuto-kimura-g"
+  ],
+  "reviewers": [
+    "yuto-kimura-g"
+  ],
+  "rangeStrategy": "pin",
+  "dependencyDashboard": true
+}

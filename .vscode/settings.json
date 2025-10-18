@@ -2,18 +2,11 @@
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
   "editor.indentSize": "tabSize",
-  "[typescript,typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always",
     "source.fixAll.ts": "always",
     "source.organizeImports": "never"
   },
-  "prettier.configPath": ".prettierrc.json",
   "files.associations": {
     "*.css": "tailwindcss"
   }
